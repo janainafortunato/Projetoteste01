@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><h2>Dia-a-dia Associações<h2></title>
+  <title>Dia-a-dia Associações</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -83,14 +83,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="container">
-  <center><h2>Circle</h2>
- <p>The .img-circle class shapes the image to a circle (not available in IE8):</p>            
+  <center><h2>MELHORIAS PARA COMUNIDADE </h2>
+ <p><h4>Capacitação para os membros das associações </h4></p>            
   <img src="img/figura07.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  <p>The .img-circle class shapes the image to a circle (not available in IE8):</p>            
+  <p><h4>Cursos de cidadania para moradores do Forte Orage</h4></p>            
   <img src="img/figura08.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  <p>The .img-circle class shapes the image to a circle (not available in IE8):</p>            
+  <p><h4>Reunião no bairro do Pilar</h4></p>            
   <img src="img/figura09.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  <p>The .img-circle class shapes the image to a circle (not available in IE8):</p>            
+  <p><h4>Reunião geral para os moradores dos bairros do Ssocego e Vila Velha </h4></p>            
   <img src="img/figura10.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
 </div></center>
  <meta charset="utf-8">
@@ -130,7 +130,7 @@
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Missão <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#section41">Valores</a></li>
-              <li><a href="#section42">rrtttt 4.2</a></li>
+              <li><a href="#section42">Açoes sociais</a></li>
             </ul>
           </li>
         </ul>
@@ -141,28 +141,31 @@
 
 <div id="section1" class="container-fluid">
   <h1>Historia da Instituição</h1>
-  <p>Em 2010 foi feito um estudo de mercado para lança uma projeto que divulgasem as instituições que trabalham nas comunidades realizado politicas publicas  que Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p><h4>Em 2010 foi feito um estudo de mercado para lança uma projeto que divulgasem as instituições que trabalham nas comunidades realizado politicas publicas  que buscam beneficios para os bairros em geral, sendo o municipio de Ilha de Itamaracá escolhido como projeto piloto para a interação das comunidades no site.
+  Deesa forma, a equipe vem trazer uma nova metodologia de comunicação e cidadania com os moradores.</h4></p>
+  <p> </p>
 </div>
 <div id="section2" class="container-fluid">
   <h1>Desenvolvedores</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p><h4>Janaina Fortunato da Silva / Email: Janaina.projetos@live.com / Fone: (81) 97322-3016</p>
+  <p>Janio Vinicios Ramos Cajueiro / Email:janiovenicios17@gmail.com / Fone: (81) 98676-9119</p>
+   <p>Suellen Barbosa da Cruz / Email: suellenbarbosa.c@hotmail.com / Fone: (81) 98971-5026</p></h4>
 </div>
 <div id="section3" class="container-fluid">
-  <h1>ttrew</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <h1>Missão</h1>
+  <p><h4>Trazer informações para a comunidade com qualidade, simplicidade e com facilidade.</h4> </p>
+ 
 </div>
 <div id="section41" class="container-fluid">
-  <h1>Section 4 Submenu 1</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <h1>Vissão</h1>
+  <p><h4>Ser o melhor site de informação em serviços de cidadania do estado de Pernambu em 3 anos</h4></p>
+ 
 </div>
 <div id="section42" class="container-fluid">
-  <h1>Section 4 Submenu 2</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <h1>Valores</h1>
+  <p><h4>Presta serviços com resposabilidade</p>
+   <p>Ser transparente com as noticais</p>
+    <p>trazre beneficios para os cidadões </h4></p>
 </div>
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -173,8 +176,8 @@
 <body>
 
 <div class="container">
-  <h2>Media Object</h2>
-  <p>Use the "media-left" class to left-align a media object. Text that should appear next to the image, is placed inside a container with class="media-body".</p>
+  <h2>Deixe seu comentario </h2>
+  <!--<p>Use the "media-left" class to left-align a media object. Text that should appear next to the image, is placed inside a container with class="media-body".</p>
   <p>Tip: Use the "media-right" class to right-align the media object.</p><br>
   
   <!-- Left-aligned media object -->
@@ -183,8 +186,8 @@
       <img src="img/figura04.png" class="media-object" style="width:60px">
     </div>
     <div class="media-body">
-      <h4 class="media-heading">Left-aligned</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4 class="media-heading">Maria dos Santos</h4>
+      <p>Gostaria de saber quando vai haver doacões de leite? </p>
     </div>
   </div>
   <hr>
@@ -193,8 +196,8 @@
       <img src="img/figura05.png" class="media-object" style="width:60px">
     </div>
     <div class="media-body">
-      <h4 class="media-heading">Left-aligned</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4 class="media-heading">Fernanda Santos</h4>
+      <p>Gostei bastante do curso de manicure oferecido pela associação do Pilar</p>
     </div>
   </div>
   <hr>
@@ -202,8 +205,8 @@
   <!-- Right-aligned media object -->
   <div class="media">
     <div class="media-body">
-      <h4 class="media-heading">Right-aligned</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4 class="media-heading">José Antonio</h4>
+      <p> como faço para me cadidata para oferecer serviços comunitarios? </p>
     </div>
     <div class="media-right">
       <img src="img/figura06.png" class="media-object" style="width:60px">
@@ -220,8 +223,8 @@
 </head>
 <body>
 <div class="container">
-  <h2>Pagination - Active State</h2>
-  <p>Add class .active to let the user know which page he/she is on:</p>
+  <h2>Dia-a-dia Associações</h2>
+ <!-- <p>Add class .active to let the user know which page he/she is on:</p> -->
   <ul class="pagination">
     <li><a href="#">1</a></li>
     <li class="active"><a href="#">2</a></li>
