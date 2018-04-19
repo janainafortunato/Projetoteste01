@@ -102,11 +102,11 @@
   body {
       position: relative; 
   }
-  #section1 {padding-top:25px;height:200px;color: #fff; background-color: #999999;}
-  #section2 {padding-top:25px;height:200px;color: #fff; background-color: #999999;}
-  #section3 {padding-top:25px;height:200px;color: #fff; background-color: #999999;}
-  #section41 {padding-top:25px;height:200px;color: #fff; background-color:#999999;}
-  #section42 {padding-top:25px;height:200px;color: #fff; background-color:#999999;}
+  #section1 {padding-top:10px;height:150px;color: #black; background-color: #white;}
+  #section2 {padding-top:10px;height:150px;color: #black; background-color: #white;}
+  #section3 {padding-top:10px;height:150px;color: #black; background-color: #white;}
+  #section41 {padding-top:10px;height:150px;color: #black; background-color:#white;}
+  #section42 {padding-top:10px;height:150px;color: #black; background-color:#white;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -140,32 +140,32 @@
 </nav>    
 
 <div id="section1" class="container-fluid">
-  <h1>Historia da Instituição</h1>
+  <center><h1>Historia da Instituição</h1></center>
   <p><h4>Em 2010 foi feito um estudo de mercado para lança uma projeto que divulgasem as instituições que trabalham nas comunidades realizado politicas publicas  que buscam beneficios para os bairros em geral, sendo o municipio de Ilha de Itamaracá escolhido como projeto piloto para a interação das comunidades no site.
   Deesa forma, a equipe vem trazer uma nova metodologia de comunicação e cidadania com os moradores.</h4></p>
   <p> </p>
 </div>
 <div id="section2" class="container-fluid">
-  <h1>Desenvolvedores</h1>
+  <center><h1>Desenvolvedores</h1>
   <p><h4>Janaina Fortunato da Silva / Email: Janaina.projetos@live.com / Fone: (81) 97322-3016</p>
   <p>Janio Vinicios Ramos Cajueiro / Email:janiovenicios17@gmail.com / Fone: (81) 98676-9119</p>
-   <p>Suellen Barbosa da Cruz / Email: suellenbarbosa.c@hotmail.com / Fone: (81) 98971-5026</p></h4>
+   <p>Suellen Barbosa da Cruz / Email: suellenbarbosa.c@hotmail.com / Fone: (81) 98971-5026</p></h4></center>
 </div>
 <div id="section3" class="container-fluid">
-  <h1>Missão</h1>
-  <p><h4>Trazer informações para a comunidade com qualidade, simplicidade e com facilidade.</h4> </p>
+  <center><h1>Missão</h1>
+  <p><h4>Trazer informações para a comunidade com qualidade, simplicidade e com facilidade.</h4> </p></center>
  
 </div>
 <div id="section41" class="container-fluid">
-  <h1>Vissão</h1>
-  <p><h4>Ser o melhor site de informação em serviços de cidadania do estado de Pernambu em 3 anos</h4></p>
+  <center><h1>Vissão</h1>
+  <p><h4>Ser o melhor site de informação em serviços de cidadania do estado de Pernambu em 3 anos</h4></p></center>
  
 </div>
 <div id="section42" class="container-fluid">
-  <h1>Valores</h1>
+  <center><h1>Valores</h1>
   <p><h4>Presta serviços com resposabilidade</p>
    <p>Ser transparente com as noticais</p>
-    <p>trazre beneficios para os cidadões </h4></p>
+    <p>trazre beneficios para os cidadões </h4></p></center>
 </div>
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
