@@ -15,15 +15,16 @@
  <br>
  <br>
  <br>
-  <center><button type="button" class=#999999>Noticias</button>
-  <button type="button" class=#999999 >Cursos</button>
+  <center><button type="button"class=#999999>Noticias</button>
+  <button type="button" class=#999999>Cursos</button>
   <button type="button" class=#999999>Politica</button>
   <button type="button" class=#999999>Esporte</button>
   <button type="button" class=#999999>Projetos</button>
   <button type="button" class=#999999>Equipe</button>
   <button type="button" class=#999999>Historia</button>
   <button type="button" class=#999999>Buscar</button>
-  <button type="button" class=#999999><a href="inserir_noticias.php">Inserir noticias</a></button></center>  
+  <button type="button" class=#999999><a href="inserir_noticias.php">Inserir noticias</a></button>
+  <button type="button" class=#999999><a href="form.assoc.php">Cadastro</a></button></center>   
 </div>
 <head><br>
  
@@ -103,11 +104,11 @@
   body {
       position: relative; 
   }
-  #section1 {padding-top:10px;height:150px;color: #black; background-color: #white;}
-  #section2 {padding-top:10px;height:150px;color: #black; background-color: #white;}
-  #section3 {padding-top:10px;height:150px;color: #black; background-color: #white;}
-  #section41 {padding-top:10px;height:150px;color: #black; background-color:#white;}
-  #section42 {padding-top:10px;height:150px;color: #black; background-color:#white;}
+  #section1 {padding-top:500px;height:500px;color: #black; background-color: #white;}
+  #section2 {padding-top:200px;height:150px;color: #black; background-color: #white;}
+  #section3 {padding-top:300px;height:200px;color: #black; background-color: #white;}
+  #section41 {padding-top:200px;height:150px;color: #black; background-color:#white;}
+  #section42 {padding-top:500px;height:500px;color: #black; background-color:#white;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
