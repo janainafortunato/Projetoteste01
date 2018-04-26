@@ -16,13 +16,14 @@
  <br>
  <br>
   <center><button type="button" class=#999999>Noticias</button>
-  <button type="button" class= #999999 ><a href="curso.php">Cursos</a></button>
+  <button type="button" class=#999999 >Cursos</button>
   <button type="button" class=#999999>Politica</button>
   <button type="button" class=#999999>Esporte</button>
   <button type="button" class=#999999>Projetos</button>
   <button type="button" class=#999999>Equipe</button>
   <button type="button" class=#999999>Historia</button>
-  <button type="button" class=#999999>Buscar</button></center>    
+  <button type="button" class=#999999>Buscar</button>
+  <button type="button" class=#999999><a href="inserir_noticias.php">Inserir noticias</a></button></center>  
 </div>
 <head><br>
  
