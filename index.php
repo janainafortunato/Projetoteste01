@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Dia-a-dia Associações</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+<?php include "cabeçalho.php";
+?>
 
-<div class= "container">
+<!-- <div class= "container">
  <br>
  <br>
  <br>
@@ -25,46 +16,32 @@
   <button type="button" class=#999999>Buscar</button>
   <button type="button" class=#999999><a href="inserir_noticias.php">Inserir noticias</a></button>
   <button type="button" class=#999999><a href="form.assoc.php">Cadastro</a></button></center>   
-</div>
-<head><br>
+</div> -->
  
-  <dir><meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+<main> 
 
-<div class="container">
-  <h2>ÚLTIMAS NOTÍCAIS</h2>  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="container">
+    <h2>ÚLTIMAS NOTÍCAIS</h2>  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="img/figura01.png" alt="Los Angeles" style="width:100%;">
-      </div>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/figura01.png" alt="Los Angeles" width="1200" height="1000">
+        </div>
 
       <div class="item">
-        <img src="img/figura02.png" alt="Chicago" style="width:100%;">
+        <img src="img/figura02.png" alt="Chicago" width="1200" height="1000">
       </div>
     
       <div class="item">
-        <img src="img/figura.03.png" alt="New york" style="width:100%;">
+        <img src="img/figura.03.png" alt="New york" width="1200" height="1000">
       </div>
     </div>
 
@@ -78,105 +55,48 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div></dir>
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<div class="container">
-  <center><h2>MELHORIAS PARA COMUNIDADE </h2>
- <p><h4>Capacitação para os membros das associações </h4></p>            
-  <img src="img/figura07.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  <p><h4>Cursos de cidadania para moradores do Forte Orage</h4></p>            
-  <img src="img/figura08.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  <p><h4>Reunião no bairro do Pilar</h4></p>            
-  <img src="img/figura09.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  <p><h4>Reunião geral para os moradores dos bairros do Ssocego e Vila Velha </h4></p>            
-  <img src="img/figura10.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-</div></center>
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      position: relative; 
-  }
-  #section1 {padding-top:500px;height:500px;color: #black; background-color: #white;}
-  #section2 {padding-top:200px;height:150px;color: #black; background-color: #white;}
-  #section3 {padding-top:300px;height:200px;color: #black; background-color: #white;}
-  #section41 {padding-top:200px;height:150px;color: #black; background-color:#white;}
-  #section42 {padding-top:500px;height:500px;color: #black; background-color:#white;}
-  </style>
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"><b>DIA-A-DIA ASSOCIAÇÕES<b></a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#section1">Trajetória</a></li>
-          <li><a href="#section2">Equipe</a></li>
-          <li><a href="#section3">Visão</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Missão <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#section41">Valores</a></li>
-              <li><a href="#section42">Açoes sociais</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>    
-
-<div id="section1" class="container-fluid">
+  <div class="container">
+    <center><h2>MELHORIAS PARA COMUNIDADE </h2>
+    <p><h4>Capacitação para os membros das associações </h4></p>            
+    <img src="img/figura07.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+    <p><h4>Cursos de cidadania para moradores do Forte Orage</h4></p>            
+    <img src="img/figura08.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+    <p><h4>Reunião no bairro do Pilar</h4></p>            
+    <img src="img/figura09.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+    <p><h4>Reunião geral para os moradores dos bairros do Ssocego e Vila Velha </h4></p>            
+    <img src="img/figura10.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+  </div></center>
+ 
+  <!-- <div id="section1" class="container-fluid">
   <center><h1>Historia da Instituição</h1></center>
   <p><h4>Em 2010 foi feito um estudo de mercado para lança uma projeto que divulgasem as instituições que trabalham nas comunidades realizado politicas publicas  que buscam beneficios para os bairros em geral, sendo o municipio de Ilha de Itamaracá escolhido como projeto piloto para a interação das comunidades no site.
   Deesa forma, a equipe vem trazer uma nova metodologia de comunicação e cidadania com os moradores.</h4></p>
   <p> </p>
-</div>
-<div id="section2" class="container-fluid">
+  </div>
+  <div id="section2" class="container-fluid">
   <center><h1>Desenvolvedores</h1>
   <p><h4>Janaina Fortunato da Silva / Email: Janaina.projetos@live.com / Fone: (81) 97322-3016</p>
   <p>Janio Vinicios Ramos Cajueiro / Email:janiovenicios17@gmail.com / Fone: (81) 98676-9119</p>
    <p>Suellen Barbosa da Cruz / Email: suellenbarbosa.c@hotmail.com / Fone: (81) 98971-5026</p></h4></center>
-</div>
-<div id="section3" class="container-fluid">
+  </div>
+  <div id="section3" class="container-fluid">
   <center><h1>Missão</h1>
   <p><h4>Trazer informações para a comunidade com qualidade, simplicidade e com facilidade.</h4> </p></center>
  
-</div>
-<div id="section41" class="container-fluid">
+  </div>
+  <div id="section41" class="container-fluid">
   <center><h1>Vissão</h1>
   <p><h4>Ser o melhor site de informação em serviços de cidadania do estado de Pernambu em 3 anos</h4></p></center>
  
-</div>
-<div id="section42" class="container-fluid">
+  </div>
+  <div id="section42" class="container-fluid">
   <center><h1>Valores</h1>
   <p><h4>Presta serviços com resposabilidade</p>
-   <p>Ser transparente com as noticais</p>
-    <p>trazre beneficios para os cidadões </h4></p></center>
-</div>
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
+  <p>Ser transparente com as noticais</p>
+  <p>trazre beneficios para os cidadões </h4></p></center>
+  </div> -->
+ 
 <div class="container">
   <h2>Deixe seu comentario </h2>
   <!--<p>Use the "media-left" class to left-align a media object. Text that should appear next to the image, is placed inside a container with class="media-body".</p>
