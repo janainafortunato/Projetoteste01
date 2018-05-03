@@ -7,7 +7,7 @@ include "cabeçalho.php";
    
    		<h2>Login</h2>
 
-   		<form action="addAssociacoes.php" method="post">
+   		<form action="autLogin.php" method="post">
    			<div class="form-group">
         	<label for="email">Email:</label>
         	<input type="email" class="form-control" id="email" placeholder="Email" name="email" required>

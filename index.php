@@ -94,18 +94,8 @@
 
   </div>
   
-  <div class="container">
-    <h2>Dia-a-dia Associações</h2>
-    <!-- <p>Add class .active to let the user know which page he/she is on:</p> -->
-    <ul class="pagination">
-      <li><a href="#">1</a></li>
-      <li class="active"><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-    </ul>
-
-  </div>
+  <br>
+  <br>
 </main>
 
 <?php include "rodape.php";

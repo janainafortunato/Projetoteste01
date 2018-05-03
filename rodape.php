@@ -5,39 +5,9 @@
         
         <div class="col-md-12">
           <div class="footer-title text-xs-center">
-          <h4 class="p-b-1">Contact Us</h4>
+          <h4 class="p-b-1">Dia-a-dia Associações</h4>
         </div>
-        </div>
-        <div class="col-md-2">
-          <div class="card card-primary">
-            <div class="card-header">Council</div>
-          </div>
-        </div><!--col-md-2-->
-          <div class="col-md-2">
-          <div class="card card-primary">
-            <div class="card-header">Social Media</div>
-          </div>
-        </div><!--col-md-2-->
-          <div class="col-md-2">
-          <div class="card card-primary">
-            <div class="card-header">Boards and Committees</div>
-          </div>
-        </div><!--col-md-2-->
-          <div class="col-md-2">
-          <div class="card card-primary">
-            <div class="card-header">Departments</div>
-          </div>
-        </div><!--col-md-2-->
-          <div class="col-md-2">
-          <div class="card card-primary">
-            <div class="card-header">Staff</div>
-          </div>
-        </div><!--col-md-2-->
-          <div class="col-md-2">
-          <div class="card card-primary">
-            <div class="card-header">Fire and Police</div>
-          </div>
-        </div><!--col-md-2-->
+  </div><!--col-md-2-->
       </div>
     </div>
   </div>
@@ -46,22 +16,7 @@
     <div class="row">
       <div class="col-md-3 col-sm-6">
         <!--Column1-->
-        <div class="footer-pad">
-          <h4>Address</h4>
-          <address>
-                                <ul class="list-unstyled">
-                                    <li>
-                    City Hall<br>
-                                        212  Street<br>
-                                        Lawoma<br>
-                                        735<br>
-                                    </li>
-                                    <li>
-                                        Phone: 0
-                                    </li>
-                                </ul>
-                            </address>
-        </div>
+        
       </div>
       <div class="col-md-3 col-sm-6">
         <!--Column1-->

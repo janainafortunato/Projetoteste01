@@ -10,34 +10,43 @@ include "cabeçalho.php";
     <form action="addAssociacoes.php" method="post">
 
       <div class="form-group">
-        <label for="nome">Nome do Responsável:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" required>
+        <label for="nomeFan">Nome Fantasia:</label>
+        <input type="text" class="form-control" id="nomeFan" placeholder="Ex:(Associação de Moradores)" name="nomeFan" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ativPrim">Atividade Primaria:</label>
+        <input type="text" class="form-control" id="ativPrim" placeholder="Ex:(Área de atuação)" name="ativPrim" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" class="form-control" id="cnpj" placeholder="Numero de registro" name="cnpj" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="bairro">Localização:</label>
+        <input type="text" class="form-control" id="bairro" placeholder="EX:(Bairro-PE)" name="loc" required>
       </div>
 
       <div class="form-group">
         <label for="rua">Endereço:</label>
-        <input type="text" class="form-control" id="nome" placeholder="ex:(Rua, 123)" name="rua" required>
+        <input type="text" class="form-control" id="Rua" placeholder="Ex:(Nome da rua)" name="rua" required>
       </div>
 
       <div class="form-group">
-        <label for="cidade">Cidade:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Cidade" name="cidade" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="bairro">Bairro:</label>
-        <input type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro" required>
+        <label for="fone">Telefone:</label>
+        <input type="text" class="form-control" id="fone" placeholder="Ex:(ddd987511238)" name="fone" required>
       </div>
 
       <div class="form-group">
-        <label for="cep">CPE:</label>
-        <input type="text" class="form-control" id="cep" placeholder="ex:(xxxxx-xxx)" name="cep" required>
+        <label for="nomeRes">Nome do Responsavel:</label>
+        <input type="text" class="form-control" id="nomeRes" placeholder="Nome" name="nomeRes" required>
       </div>
-
       
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+        <input type="email" class="form-control" id="email" placeholder="Email" name="usuario" required>
       </div>
     
       <div class="form-group">
