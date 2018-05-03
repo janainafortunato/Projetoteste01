@@ -1,5 +1,5 @@
 <?php 
-include "cabeçalho.php";
+include 'cabeçalho.php';
 ?>
 <main class="mainSobre">
 	<div class="container mt-3">
@@ -25,3 +25,6 @@ include "cabeçalho.php";
     	<p>trazre beneficios para os cidadões</p>
   	</div>
 </main>
+<?php
+include 'rodape.php'
+?>

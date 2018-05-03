@@ -47,3 +47,6 @@
 </head>
 </body>
 </html>
+<?php
+include 'rodape.php'
+?>

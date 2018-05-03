@@ -59,6 +59,10 @@ include "cabeçalho.php";
   </div>
 
 </main>
+
+<?php
+include 'rodape.php'
+?>
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>

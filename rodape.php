@@ -23,10 +23,9 @@
         <div class="footer-pad">
           <h4></h4>
           <ul class="list-unstyled">
-            <li><a href="#"></a></li>
-            <li><a href="#">Últimas Notícias</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Ações Sociais</a></li>
+            <li><a href="index.php">Últimas Notícias</a></li>
+            <li><a href="projeto.php">Projetos</a></li>
+            <li><a href="acoes-sociais.php">Ações Sociais</a></li>
           </ul>
         </div>
       </div>
@@ -35,9 +34,9 @@
         <div class="footer-pad">
           <h4></h4>
           <ul class="list-unstyled">
-            <li><a href="#">Curso</a></li>
-            <li><a href="#">Política</a></li>
-            <li><a href="#">Esporte</a></li>
+            <li><a href="cursos.php">Curso</a></li>
+            <li><a href="politica.php">Política</a></li>
+            <li><a href="esporte.php">Esporte</a></li>
           </ul>
         </div>
       </div>
@@ -46,9 +45,8 @@
         <div class="footer-pad">
           <h4></h4>
           <ul class="list-unstyled">
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Desenvolvedores</a></li>
-            <i class="fab fa-facebook-square"></i>
+            <li><a href="sobre.php">Sobre</a></li>
+            <li><a href="desenvolvedores.php">Desenvolvedores</a></li>
           </ul>
         </div>
       </div>
