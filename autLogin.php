@@ -8,7 +8,7 @@ $pw = $_POST['password'];
 if (login($user, $pw)) {
     redirect('index-assoc.php');
 } else {
-    redirect('login.php');
+    redirect('form-login.php');
 }
 
 ?>

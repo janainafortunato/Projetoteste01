@@ -10,12 +10,12 @@ include "cabeçalho.php";
    		<form action="autLogin.php" method="post">
    			<div class="form-group">
         	<label for="email">Email:</label>
-        	<input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+        	<input type="email" class="form-control" id="email" placeholder="Email" name="user" required>
       	</div>
     
       	<div class="form-group">
         	<label for="senha">Senha:</label>
-        	<input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" required>
+        	<input type="password" class="form-control" id="senha" placeholder="Senha" name="password" required>
       	</div>
     
       	<button type="submit" class="btn btn-primary">Enviar</button>
@@ -23,6 +23,3 @@ include "cabeçalho.php";
   	</div>
 
 </main>
-<?php
-include 'rodape.php'
-?>

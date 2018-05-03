@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+include 'init.php';
 
 $nomeFan = $_POST['nomeFan'];
 $ativPrim = $_POST['ativPrim'];
@@ -8,16 +9,26 @@ $loc = $_POST['loc'];
 $rua = $_POST['rua'];
 $fone = $_POST['fone'];
 $nomeRes = $_POST['nomeRes'];
-$usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$user = $_POST['user'];
+$pw = $_POST['password'];
 
-$usuarios = $usuario.",".$senha. ",".$nomeFan.",".$ativPrim.",".$cnpj.",".$loc.",".$rua.",".$fone.",".$nomeRes;
+$associacoes = $user.",".$pw. ",".$nomeFan.",".$ativPrim.",".$cnpj.",".$loc.",".$rua.",".$fone.",".$nomeRes;
+
+$date = file('accociacoes.csv' );
+$date [] = $usuarios."\n";
+$date_str = implode('',$date);
+
+file_put_contents('associacoes.csv', $date_str);
+
+$usuarios = $user.",".$pw;
 
 $date = file('usuarios.csv' );
 $date [] = $usuarios."\n";
 $date_str = implode('',$date);
 
 file_put_contents('usuarios.csv', $date_str);
+
+redirect('form-login.php');
 
 
 ?>
