@@ -1,6 +1,8 @@
 <?php 
 include "cabeçalho.php";
 ?>
+<html>
+<body>
 <main>
 
 	  <div class="container">
@@ -23,3 +25,10 @@ include "cabeçalho.php";
   	</div>
 
 </main>
+<div style="margin-top:170px;">
+<?php
+include 'rodape.php';
+?>
+<div>
+</body>
+</html>

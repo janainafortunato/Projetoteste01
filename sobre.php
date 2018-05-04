@@ -26,5 +26,5 @@ include 'cabeçalho.php';
   	</div>
 </main>
 <?php
-include 'rodape.php'
+include 'rodape.php';
 ?>
