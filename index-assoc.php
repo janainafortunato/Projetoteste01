@@ -1,5 +1,6 @@
+<?php session_start();?>
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Dia-a-dia Associações</title>
@@ -10,16 +11,6 @@
     <link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-      body {
-        position: relative; 
-      }
-      #section1 {padding-top:500px;height:500px;color: #black; background-color: #white;}
-      #section2 {padding-top:200px;height:150px;color: #black; background-color: #white;}
-      #section3 {padding-top:300px;height:200px;color: #black; background-color: #white;}
-      #section41 {padding-top:200px;height:150px;color: #black; background-color:#white;}
-      #section42 {padding-top:500px;height:500px;color: #black; background-color:#white;}
-    </style>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -32,16 +23,6 @@
       </div>
 
       <nav class="navbar navbar-inverse navbar">
-        <!-- <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#"><b>DIA-A-DIA ASSOCIAÇÕES<b></a>
-          </div>
-        <div> -->
         <div>
           <ul class="nav navbar-nav">
             <li><a href="index.php">Últimas Notícias</a></li>
@@ -55,15 +36,38 @@
 
           <ul class="nav navbar-nav">
             <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
-            <li><a href="form-login.php">Login</a></li>
             <li><a href="index.php">Sair</a></li>
           </ul>
         </div>
       </nav> 
     </header>
+    <h4>Bem Vindo(a), <?php echo $_SESSION['user-logged'];?></h4>
 <main>
+<center>
+  <h1>Publicar Noticias</h1>
+<form>
+  <textarea rows="30" cols="60" maxlength="500"></textarea>
+</form>
+<button><a href="inserir_noticias.php">Enviar</a></button> <br>
 
-
+<br>
+<body>
+<div class="container">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Classificação</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Cursos</a></li>
+      <li><a href="#">Politica</a></li>
+      <li><a href="#">Esporte</a></li>
+      <li><a href="#">Projetos</a></li>
+      
+    </ul>
+  </div>
+</div>
+</center>
 </main>
 <div style="margin-top:450px;">
 <?php
