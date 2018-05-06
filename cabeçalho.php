@@ -9,16 +9,6 @@
     <link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-      body {
-        position: relative; 
-      }
-      #section1 {padding-top:500px;height:500px;color: #black; background-color: #white;}
-      #section2 {padding-top:200px;height:150px;color: #black; background-color: #white;}
-      #section3 {padding-top:300px;height:200px;color: #black; background-color: #white;}
-      #section41 {padding-top:200px;height:150px;color: #black; background-color:#white;}
-      #section42 {padding-top:500px;height:500px;color: #black; background-color:#white;}
-    </style>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -31,16 +21,6 @@
       </div>
 
       <nav class="navbar navbar-inverse navbar">
-        <!-- <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#"><b>DIA-A-DIA ASSOCIAÇÕES<b></a>
-          </div>
-        <div> -->
         <div>
           <ul class="nav navbar-nav">
             <li><a href="index.php">Últimas Notícias</a></li>
@@ -50,11 +30,8 @@
             <li><a href="projeto.php">Projetos</a></li>
             <li><a href="acoes-sociais.php">Ações Sociais</a></li>
             <li><a href="sobre.php">Sobre</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav">
             <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
-            <li><a href="form-login.php">Login</a></li>
+            <li><a href="form-login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
           </ul>
         </div>
       </nav> 

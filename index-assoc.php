@@ -36,15 +36,15 @@
 
           <ul class="nav navbar-nav">
             <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
-            <li><a href="index.php">Sair</a></li>
+            <li><a href="index.php">Sair <i class="fas fa-sign-out-alt"></i></a></li>
           </ul>
         </div>
       </nav> 
     </header>
-    <h4>Bem Vindo(a), <?php echo $_SESSION['user-logged'];?></h4>
+    <h4 class="bemVindo">Bem-vindo(a), <?php echo $_SESSION['user-logged'];?></h4>
 <main>
 <center>
-  <h1>Publicar Noticias</h1>
+  <h1>Publicar Notícias</h1>
 <form>
   <textarea rows="30" cols="60" maxlength="500"></textarea>
 </form>
@@ -59,8 +59,9 @@
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
+      
       <li><a href="#">Cursos</a></li>
-      <li><a href="#">Politica</a></li>
+      <li><a href="#">Política</a></li>
       <li><a href="#">Esporte</a></li>
       <li><a href="#">Projetos</a></li>
       
@@ -76,3 +77,4 @@ include 'rodape.php';
 <div>
 </body>
 </html>
+x'
