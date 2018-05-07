@@ -14,9 +14,9 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    
     <header>
-      
-    </header>
+
       <div class="jumbotron text-center">
         <h1>Dia-a-dia Associações</h1>
         <p>Veja as últimas notícias e acompanhe o que esta acontecendo na associação do seu bairro.</p> 
@@ -24,25 +24,38 @@
 
       <nav class="navbar navbar-inverse navbar">
         <div>
-          <ul class="nav navbar-nav">
-            <li><a href="index.php">Últimas Notícias</a></li>
-            <li><a href="cursos.php">Curso</a></li>
-            <li><a href="politica.php">Política</a></li>
-            <li><a href="esporte.php">Esporte</a></li>
-            <li><a href="projeto.php">Projetos</a></li>
-            <li><a href="acoes-sociais.php">Ações Sociais</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav">
-            <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
-            <li><a href="index.php">Sair <i class="fas fa-sign-out-alt"></i></a></li>
-          </ul>
+          <div class="row">
+            <div class="col col-lg-3">
+              <ul class="nav navbar-nav">
+                <li><a href="sobre.php">Sobre</a></li>
+              </ul>
+            </div>
+            
+            <div class="col col-lg-7">
+              <ul class="nav navbar-nav">
+                <li><a href="index.php">Últimas Notícias</a></li>
+                <li><a href="cursos.php">Curso</a></li>
+                <li><a href="politica.php">Política</a></li>
+                <li><a href="esporte.php">Esporte</a></li>
+                <li><a href="projeto.php">Projetos</a></li>
+                <li><a href="acoes-sociais.php">Ações Sociais</a></li>
+              </ul>
+            </div>
+          
+            <div class="col col-lg-2">
+              <ul class="nav navbar-nav">
+                <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
+                <li><a href="index.php">Sair <i class="fas fa-sign-out-alt"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </nav> 
+      </nav>
+
     </header>
+
     <h4 class="bemVindo">Bem-vindo(a), <?php echo $_SESSION['user-logged'];?></h4>
-<main>
+  <main>
 <center>
   <h1>Publicar Notícias</h1>
 <form>
@@ -77,4 +90,3 @@ include 'rodape.php';
 <div>
 </body>
 </html>
-x'

@@ -15,7 +15,7 @@ function login($user, $pw) {
     return false;
 }
 
-function is_logged() {
+function is_logged() {  
     return isset($_SESSION['user-logged']);
 }
 

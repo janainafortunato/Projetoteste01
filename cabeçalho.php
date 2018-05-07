@@ -22,6 +22,13 @@
 
       <nav class="navbar navbar-inverse navbar">
         <div>
+          <div class="row">
+          <div class="col col-lg-3">
+            <ul class="nav navbar-nav">
+            <li><a href="sobre.php">Sobre</a></li>
+            </ul>
+            </div>
+          <div class="col col-lg-7">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Últimas Notícias</a></li>
             <li><a href="cursos.php">Curso</a></li>
@@ -29,10 +36,20 @@
             <li><a href="esporte.php">Esporte</a></li>
             <li><a href="projeto.php">Projetos</a></li>
             <li><a href="acoes-sociais.php">Ações Sociais</a></li>
+          </ul>
+          </div>
+          <!-- <div class="col col-lg-4">
+            <ul class="nav navbar-nav">
             <li><a href="sobre.php">Sobre</a></li>
+            </ul>
+            </div>
+           -->  <div class="col col-lg-2">
+            <ul class="nav navbar-nav">
             <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
             <li><a href="form-login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
           </ul>
+          </div>
+          </div>
         </div>
       </nav> 
     </header>
