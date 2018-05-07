@@ -18,7 +18,7 @@ include "cabeçalho.php";
         	<label for="senha">Senha:</label>
         	<input type="password" class="form-control" id="senha" placeholder="Senha" name="password" required>
       	</div>
-    
+        <a href="form-cadastro-assoc.php">Cadastre-se</a>
       	<button type="submit" class="btn btn-primary">Enviar</button>
     	</form>
   	</div>

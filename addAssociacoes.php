@@ -3,16 +3,17 @@
 include 'init.php';
 
 $nomeFan = $_POST['nomeFan'];
+$fone = $_POST['fone'];
 $ativPrim = $_POST['ativPrim'];
 $cnpj = $_POST['cnpj'];
-$loc = $_POST['loc'];
 $rua = $_POST['rua'];
-$fone = $_POST['fone'];
+$bairro = $_POST['bairro'];
+$cidade = $_POST['cidade'];
 $nomeRes = $_POST['nomeRes'];
 $user = $_POST['user'];
 $pw = $_POST['password'];
 
-$associacoes = $user.",".$pw. ",".$nomeFan.",".$ativPrim.",".$cnpj.",".$loc.",".$rua.",".$fone.",".$nomeRes;
+$associacoes = $user.",".$pw. ",".$nomeFan.",".$fone.",".$ativPrim.",".$cnpj.",".$rua.",".$bairro.",". $cidade.",".$nomeRes;
 
 $date = file('accociacoes.csv' );
 $date [] = $usuarios."\n";
