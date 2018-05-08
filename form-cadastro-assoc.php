@@ -5,9 +5,12 @@ include "cabeçalho.php";
 
   <div class="container">
    
-   <h2>Cadastro de Associações</h2>
-   
     <form action="addAssociacoes.php" method="post">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <h2>Cadastro de Associções</h2>
+        </div>
+      </div>
 
       <div class="form-row">
         <div class="form-group col-md-8">
