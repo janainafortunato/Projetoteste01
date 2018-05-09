@@ -40,31 +40,76 @@
       </a>
     </div>
   </div>
+<br>
+<br>
+  <div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+        <div>BLACK FRIDAY DEAL</div>
+        <div>
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
+        </div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    </div>
 
-  <div class="container">
-   <center><h2>MELHORIAS PARA COMUNIDADE </h2>
-    <p><h4>Capacitação para os membros das associações </h4></p>            
-    <img src="img/figura07.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-    <p><h4>Cursos de cidadania para moradores do Forte Orage</h4></p>            
-    <img src="img/figura08.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-    <p><h4>Reunião no bairro do Pilar</h4></p>            
-    <img src="img/figura09.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-    <p><h4>Reunião geral para os moradores dos bairros do Ssocego e Vila Velha </h4></p>            
-    <img src="img/figura10.png" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
-  </div></center>
+    <div class="col-sm-4">
+        <div>BLACK FRIDAY DEAL</div>
+        <div>
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
+        </div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    </div>
+    <div class="col-sm-4">
+        <div>BLACK FRIDAY DEAL</div>
+        <div>
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
+        </div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <hr>
+</div>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-6">
+        <div>BLACK FRIDAY DEAL</div>
+        <div>
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
+        </div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    </div>
+    <div class="col-sm-6">
+        <div>BLACK FRIDAY DEAL</div>
+        <div>
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+        </div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    </div>
+  </div>
+</div>
 
   <div class="container">
 
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-comments" data-href="" data-numposts="5"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
+            fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+    <div class="fb-comments" data-href="" data-numposts="5"></div>
 
     <!-- <form action="" method="post">
       <div class="form-row">
@@ -91,7 +136,7 @@
               </div>
             </div>
     </form> -->
-    </div>
+  </div>
 <br>
 <br>  
   </main>
