@@ -55,7 +55,18 @@
 
   <div class="container">
 
-    <form action="" method="post">
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-comments" data-href="" data-numposts="5"></div>
+
+    <!-- <form action="" method="post">
       <div class="form-row">
             <div class="form-group col-md-12">
               <h2>COMENTÁRIOS</h2>
@@ -64,7 +75,7 @@
 
           <div class="form-row">
             <div class="form-group col-md-1">
-              <img src="img/avatar.jpg" class="media-object" style="width:50px">
+              <img src="img/avatar.jpg" class="img-circle" style="width:50px">
             </div>
           </div>
             
@@ -79,7 +90,7 @@
                 <button class="btn" type="submit">ENVIAR</button>
               </div>
             </div>
-    </form>
+    </form> -->
     </div>
 <br>
 <br>  
