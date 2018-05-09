@@ -55,48 +55,35 @@
 
   <div class="container">
 
-    <h2>Deixe seu comentario </h2>
+    <form action="" method="post">
+      <div class="form-row">
+            <div class="form-group col-md-12">
+              <h2>COMENTÁRIOS</h2>
+            </div>
+          </div>
 
-    <div class="media">
-      <div class="media-left">
-        <img src="img/figura04.png" class="media-object" style="width:60px">
-      </div>
+          <div class="form-row">
+            <div class="form-group col-md-1">
+              <img src="img/avatar.jpg" class="media-object" style="width:50px">
+            </div>
+          </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <input class="form-control" rows="5" id="comment" placeholder="Escreva um comentário..."></input>
+              </div>
+            </div>
 
-      <div class="media-body">
-        <h4 class="media-heading">Maria dos Santos</h4>
-        <p>Gostaria de saber quando vai haver doacões de leite? </p>
-      </div>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <button class="btn" type="submit">ENVIAR</button>
+              </div>
+            </div>
+    </form>
     </div>
-
-    <hr>
-    <div class="media">
-      <div class="media-left">
-        <img src="img/figura05.png" class="media-object" style="width:60px">
-      </div>
-
-      <div class="media-body">
-        <h4 class="media-heading">Fernanda Santos</h4>
-        <p>Gostei bastante do curso de manicure oferecido pela associação do Pilar</p>
-      </div>
-    </div>
-    <hr>
-
-    <div class="media">
-      <div class="media-body">
-        <h4 class="media-heading">José Antonio</h4>
-        <p> como faço para me cadidata para oferecer serviços comunitarios? </p>
-      </div>
-      
-      <div class="media-right">
-        <img src="img/figura06.png" class="media-object" style="width:60px">
-      </div>
-    </div>
-
-  </div>
-  
-  <br>
-  <br>
-</main>
+<br>
+<br>  
+  </main>
 
 <?php include "rodape.php";
 ?> 
