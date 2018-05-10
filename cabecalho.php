@@ -25,7 +25,7 @@
       <nav class="navbar navbar-inverse navbar">
         <div>
           <div class="row">
-            <div class="col col-lg-9">
+            <div class="col col-lg-8">
               <ul class="nav navbar-nav">
                 <li><a href="index.php">Últimas Notícias</a></li>
                 <li><a href="cursos.php">Curso</a></li>
@@ -36,9 +36,10 @@
               </ul>
             </div>
             
-            <div class="col col-lg-3">
+            <div class="col col-lg-4">
               <ul class="nav navbar-nav">
                 <?php if (isset($_SESSION['user'])): ?>
+                <li style="color: gray;"><a href="#">Olá, <?php echo $_SESSION['user'];?></a></li>
                 <li><a href="index-assoc.php">Minhas Notícias</a></li>
                 <li><a href="publicar-noticias.php">Publicar Notícias</a></li>
                 <li><a href="sair.php">Sair <i class="fas fa-sign-in-alt"></i></a></li>

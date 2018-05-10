@@ -1,4 +1,4 @@
-<?php include "cabeçalho.php";
+<?php include "cabecalho.php";
 ?>
 
 <main> 

@@ -1,5 +1,5 @@
 <?php 
-include 'cabeçalho.php';
+include 'cabecalho.php';
 ?>
 <main class="mainSobre">
 	<div class="container mt-3">

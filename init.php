@@ -9,18 +9,18 @@ function login($user, $pw) {
     }
     $user_pw = $user . ',' . $pw;
     if (in_array($user_pw, $logins)) {
-        $_SESSION['user-logged'] =  $user;
+        $_SESSION['user'] =  $user;
         return true;
     }
     return false;
 }
 
 function is_logged() {  
-    return isset($_SESSION['user-logged']);
+    return isset($_SESSION['user']);
 }
 
 function logout() {
-    unset($_SESSION['user-logged']);
+    unset($_SESSION['user']);
 }
 
 function redirect($page) {
