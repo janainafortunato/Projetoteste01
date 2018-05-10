@@ -25,13 +25,7 @@
       <nav class="navbar navbar-inverse navbar">
         <div>
           <div class="row">
-            <div class="col col-lg-3">
-              <ul class="nav navbar-nav">
-                <li><a href="sobre.php">Sobre</a></li>
-              </ul>
-            </div>
-            
-            <div class="col col-lg-7">
+            <div class="col col-lg-10">
               <ul class="nav navbar-nav">
                 <li><a href="index.php">Últimas Notícias</a></li>
                 <li><a href="cursos.php">Curso</a></li>
@@ -41,13 +35,12 @@
                 <li><a href="acoes-sociais.php">Ações Sociais</a></li>
               </ul>
             </div>
-          
-            <div class="col col-lg-2">
-              <ul class="nav navbar-nav">
+          <div class="col col-lg-2">
+            <ul class="nav navbar-nav">
                 <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
                 <li><a href="index.php">Sair <i class="fas fa-sign-out-alt"></i></a></li>
-              </ul>
-            </div>
+            </ul>
+          </div>
           </div>
         </div>
       </nav>
@@ -56,7 +49,39 @@
 
     <h4 class="bemVindo">Bem-vindo(a), <?php echo $_SESSION['user-logged'];?></h4>
   <main>
-<center>
+    <div class="container">
+  <form></form>
+</div>
+
+<div class="container">
+  <h1>Publicar Notícias</h1>   
+  <div class="row">
+    <div class="col-sm-6">
+      <div>
+        <label>Digite o Título da nóticia</label>
+        <input type="text" name="Titulo">
+      </div>
+      <br>
+      <div>
+        <label>Digite o sub título da nóticia</label>
+        <input type="text" name="Titulo">
+      </div>
+      <br>
+      <div>
+        <input type="file" name="image" />
+      </div>
+      <br>
+      <div>
+        <label>Digite a Nóticia</label>
+        <textarea rows="10" cols="60" maxlength="400"></textarea>
+      </div>   
+    </div>
+  </div>
+</div>
+  </form>
+  <div>
+      
+<!-- <center>
   <h1>Publicar Notícias</h1>
 <form>
   <textarea rows="30" cols="60" maxlength="500"></textarea>
@@ -65,23 +90,12 @@
 
 <br>
 <body>
-<div class="container">
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary">Classificação</button>
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      
-      <li><a href="#">Cursos</a></li>
-      <li><a href="#">Política</a></li>
-      <li><a href="#">Esporte</a></li>
-      <li><a href="#">Projetos</a></li>
-      
-    </ul>
-  </div>
-</div>
-</center>
+<select class="selectpicker">
+  <option>Curso</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>
+</center> -->
 </main>
 <div style="margin-top:450px;">
 <?php
