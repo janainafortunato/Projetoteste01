@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +25,7 @@
       <nav class="navbar navbar-inverse navbar">
         <div>
           <div class="row">
-            <div class="col col-lg-10">
+            <div class="col col-lg-9">
               <ul class="nav navbar-nav">
                 <li><a href="index.php">Últimas Notícias</a></li>
                 <li><a href="cursos.php">Curso</a></li>
@@ -34,10 +36,17 @@
               </ul>
             </div>
             
-            <div class="col col-lg-2">
+            <div class="col col-lg-3">
               <ul class="nav navbar-nav">
+                <?php if (isset($_SESSION['user'])): ?>
+                <li><a href="index-assoc.php">Minhas Notícias</a></li>
+                <li><a href="publicar-noticias.php">Publicar Notícias</a></li>
+                <li><a href="sair.php">Sair <i class="fas fa-sign-in-alt"></i></a></li>
+                  <?php else: ?>
                 <li><a href="form-cadastro-assoc.php">Cadastre-se</a></li>
                 <li><a href="form-login.php">Login <i class="fas fa-sign-in-alt"></i></a></li>
+
+                <?php endif ?>
               </ul>
             </div>
           </div>
