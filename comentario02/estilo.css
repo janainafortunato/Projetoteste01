@@ -1,0 +1,42 @@
+0charset "iso-8859-1";
+
+span{
+	font: 15px "trebuchet ms", arial, helvetica, sans-serif;
+	color: #666;
+
+}
+input{
+	border: 1px;
+	solid #666;
+	background: #ccc;
+}
+textarea{
+	bordex: 1px;
+	solid #666;
+	background: #ccc;
+}
+.btn{
+	padding: 5px;
+}
+.btn: hover{
+	background: #333;
+	cursor: pointer;
+	color:#ccc;
+}
+#exibe{
+	width: 1000px;
+	overflow: auto;
+	background: #ccc;
+	border: 1px dashed#666;
+	padding: 5px;
+	margin-bottom: 30px;
+}
+#exibe h2{
+	font: 15px "trebuchet ms", arial, helvetica, sans-serif;
+	color:#333;
+	font-weight: bold;
+}
+#exibe p{
+	font: 14px "trebuchet ms", arial,helvetica,sans-serif;
+	color:#666;
+}

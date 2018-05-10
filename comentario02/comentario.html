@@ -1,0 +1,85 @@
+<?php
+<!-- conexão com o banco de dados -->
+mysql_connect('localhost', 'root''); 
+mysql_select_db('Servidor:loscalhost/Basededados/Camila/Tabela/tb_comentarios');
+
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/dtd/xhtml1-t">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<html xmlns="httsp;//www.w3.org/1999/xhtml">
+<had>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>   </title>
+<link href="estilo.css" rel="stylesheet" type="text/css"/> <!-- link para altera o CSS do comentario -->
+</had>
+<body>
+	<h2>Sistema Smplis de Comentario</h2> 
+<?php 
+    $selecionarDados= mysql_query("SELECT*FROM tb_comentarios WHERE status='ativo'"); <!-- parte do banco que faz conexão com o banco de dados para armazenar os comentarios -->
+	$contacoments= @mysql_num_rows($selecionarDados);
+	   if($contacoments<=0){
+	     echo"seja o primeiro a comentar!";
+
+	   }else {
+	      while($campos=mysql_fetch_array($selcionarDados)){
+	         $pegaId=$campo['id'];                                  <!-- vai armazenar o nome da pessoa que fez o comentario vai aparece na mesma pagina e o id de cada comentario-->
+	         $pegaNome=$campos['nome'];
+	         $peegaCamontario=$campos['comentario'];        <!-- vai armazenar o comentario no banco de dados e vai aparece na mesma pagina -->
+}
+?>
+
+<?php
+     
+     if(isset($_GET['action'])&& $_GET['action']=='esconder'){ <!-- pega o id na url da get e munda a opção no banco de dados  -->
+       $idEsconder=$_GET['id'];
+       $alterarDados=mysql_query("UPDATE tb_comentarios SET status='anativo ' WHERE id='$idEsconder'");
+       echo"<script > alert (\"Escondido com sucesso!\");</script>";
+     }
+ if(isset($_GET['action'])&& $_GET['action']=='excluir'){   <!-- pega o id na url da get e munda a opção no banco de dados  -->
+       $idEsconder=$_GET['id'];
+       $excluirDados=mysql_query("DELETE FROM tb_comentarios  WHERE id='$idEsconder'");
+       echo"<script > alert (\"excluido com sucesso!\");</script>";
+
+       }
+?>
+<!-- div para exibir comentario -->
+<div id="exibe">
+         <h2>nome:<?php echo $pegaNome; ?></h2> <!-- id serve para escolher qual comentario vc que excluir -->
+         <p>Comentario:<?php echo $pegaComentario; ?></p> <!-- link para editar e exclui comentario -->
+         <a href="? action=excluir&id=<?php echo $pegaId; ?>" class="esconder"> esconder</a> | excluir <a href="? action=excluir&id=<?php echo $pegaId; ?> " class= "excluir" a>
+         </div>
+
+<!-- formulario para inserir comentario -->
+	<form method="POST" enctype="multipant/form-data">
+	<span>nome:<span><br/><input type="text" name="nome" maxlength="100" /><br/><br/></span>
+	<span>comentario:<span><br/><textarea name="msg" cols="100" rows="4"></textarea></span><!-- Tamanho da caixa de texto para inserir o texto do comentario -->
+	<input type="hidden" name="acao" value="preenchido"/></span>
+	<input type="submit" name="Enviar Comentario class" class="btn"/></span> <!-- Botão para envia comentario -->
+	</form>
+
+
+
+<?
+
+<!-- bloco de codigo para inserir no banco de dados os comentarios   -->
+if(ISSET ($_POST['acao']))&& $_POST['acao']=='Prenchido'){
+	$nome= explode(' ',ucwords(trim($_POST['nome']))); <!-- linha para desconsidrar espaço no banco de dados -->
+	$nome=$nome [0];
+	$comentario=trim($_POST['msg']);
+
+	if(empty ($nome) || empty ($comentario)){    <!-- para do codigo para conferir se vai armazenar alguma informaçao no banco de dados -->
+
+     echo"<script> alert(\"preecha todos os campos\");</script>"; <!-- mensagem para conferir se o formulario foi preenchido por completo -->
+
+	}else{
+	    $status='ativo';
+	    $inserirdados=mysql_query("INSERT INTO tb_comentarios(nome,comentario,status) VALUES ('$nome', '$comentario','status')");
+	    echo"<script>alert(\"enviando com sucesso!\");</script>";" <!-- mensagem para informa que a mensagem foi enviada com sucesso para ser postada como comentario -->
+	}
+}
+?>
+</body>
+</html>

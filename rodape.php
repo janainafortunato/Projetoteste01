@@ -18,7 +18,7 @@
           <i class="fab fa-facebook-square fa-2x"></i>
           <i class="fab fa-twitter-square fa-2x"></i>
           <i class="fab fa-instagram fa-2x"></i>
-          <a href="https://github.com/suellennn/Dia-a-dia-Associa-es" target="-blank"><i class="fab fa-github-alt fa-2x"></i></a>
+          <!-- <a href="https://github.com/suellennn/Dia-a-dia-Associa-es" target="-blank"><i class="fab fa-github-alt fa-2x"></i></a> -->
         </div>
       </div>
 
