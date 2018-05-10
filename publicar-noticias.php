@@ -25,7 +25,7 @@
       <nav class="navbar navbar-inverse navbar">
         <div>
           <div class="row">
-            <div class="col col-lg-9">
+            <div class="col col-lg-10">
               <ul class="nav navbar-nav">
                 <li><a href="index.php">Últimas Notícias</a></li>
                 <li><a href="cursos.php">Curso</a></li>
@@ -35,9 +35,8 @@
                 <li><a href="acoes-sociais.php">Ações Sociais</a></li>
               </ul>
             </div>
-          <div class="col col-lg-3">
+          <div class="col col-lg-2">
             <ul class="nav navbar-nav">
-                <li><a href="index-assoc.php">Minhas Notícias</a></li>
                 <li><a href="publicar-noticias.php">Publicar Notícias</a></li>
                 <li><a href="index.php">Sair <i class="fas fa-sign-out-alt"></i></a></li>
             </ul>
@@ -50,7 +49,49 @@
 
     <h4 class="bemVindo">Bem-vindo(a), <?php echo $_SESSION['user-logged'];?></h4>
   <main>
+    <div class="container">
+  <form></form>
+</div>
+
+<div class="container">
+  <h1>Publicar Notícias</h1> 
   
+  <label>Classifique a nóticia</label>
+  <select class="selectpicker">
+  <option>Curso</option>
+  <option>Política</option>
+  <option>Esporte</option>
+  <option>Projetos</option>
+  <option>Ações Sociais</option>
+</select>  
+<br>
+<br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div>
+        <label>Digite o Título da nóticia</label>
+        <input type="text" name="Titulo">
+      </div>
+      <br>
+      <div>
+        <label>Digite o sub título da nóticia</label>
+        <input type="text" name="Titulo">
+      </div>
+      <br>
+      <div>
+        <input type="file" name="image" />
+      </div>
+      <br>
+      <div>
+        <label>Digite a Nóticia</label>
+        <textarea rows="10" cols="60" maxlength="400"></textarea>
+        <button><a href="inserir_noticias.php">Salvar</a></button> <br>
+      </div>   
+    </div>
+  </div>
+</div>
+  </form>
+  <div>
       
 <!-- <center>
   <h1>Publicar Notícias</h1>
