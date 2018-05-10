@@ -1,5 +1,5 @@
 <?php 
-include 'cabeçalho.php';
+include 'cabecalho.php';
 ?>
 <div class="container">    
   <div class="row">

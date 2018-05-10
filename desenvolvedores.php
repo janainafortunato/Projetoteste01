@@ -1,5 +1,5 @@
 <?php
-include 'cabeçalho.php';
+include 'cabecalho.php';
 
 ?>
 <div style="margin-top:450px;">
