@@ -15,24 +15,29 @@ include "cabecalho.php";
       <div class="form-row">
         <div class="form-group col-md-8">
           <label for="nomeFan">Nome Fantasia:</label>
-          <input type="text" class="form-control" id="nomeFan" placeholder="Nome da Associação de Moradores" name="nomeFan" required>
+          <input type="text" class="form-control" id="nomeFan" placeholder="Nome da Associação" name="nomeFan" required>
         </div>
 
         <div class="form-group col-md-4">
-          <label for="fone">Telefone:</label>
-          <input type="text" class="form-control" id="fone" placeholder="Telefone da associação" name="fone" required>
+          <label for="cnpj">CNPJ:</label>
+          <input type="text" class="form-control" id="cnpj" placeholder="CNPJ" name="cnpj" required>
         </div>
       </div>
 
       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="ativPrim">Atividade Primaria:</label>
-          <input type="text" class="form-control" id="ativPrim" placeholder="Área de atuação" name="ativPrim" required>
+        <div class="form-group col-md-4">
+          <label for="fone">Telefone:</label>
+          <input type="text" class="form-control" id="fone" placeholder="Telefone da associação" name="fone">
         </div>
 
-        <div class="form-group col-md-6">
-          <label for="cnpj">CNPJ:</label>
-          <input type="text" class="form-control" id="cnpj" placeholder="Numero de registro" name="cnpj" required>
+        <div class="form-group col-md-4">
+          <label for="cel">Celular:</label>
+          <input type="text" class="form-control" id="cel" placeholder="(DDD)número" name="cel" required>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="face">Facebook:</label>
+          <input type="text" class="form-control" id="face" placeholder="Facebook" name="face">
         </div>
       </div>
 
