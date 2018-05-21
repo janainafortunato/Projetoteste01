@@ -17,19 +17,19 @@
       
       <div class="carousel-inner">
         <div class="item active">
-          <img src="img/figura03.jpeg" alt="Los Angeles" width="1200" height="1000">
+          <a href="espaco.php"><img src="img/figura03.jpeg" alt="Los Angeles" width="1200" height="1000"></a>
             <div class="row">
           
-             <h3>Ainda não é Cadastrado?</h3>
+             
            </div>
         </div>
     
          <div class="item">
-          <img src="img/figura01.jpeg" alt="Chicago" width="1200" height="1000">
+          <a href="atersantos.php"><img src="img/figura01.jpeg" alt="Chicago" width="1200" height="1000"></a>
         </div>
      
         <div class="item">
-          <img src="img/figura09.jpeg" alt="New york" width="1200" height="1000">
+          <a href="reuniao.php"><img src="img/figura09.jpeg" alt="New york" width="1200" height="1000"></a>
         </div>
       </div>
     
