@@ -34,3 +34,22 @@ redirect('form-login.php');
 
 
 ?>
+<?php
+
+// $nomeFan = addcslashes($_POST['nomeFan']);
+// $fone = addcslashes($_POST['fone']);
+// $cel = addcslashes($_POST['cel']);
+// $face = addcslashes($_POST['face']);
+// $cnpj = addcslashes($_POST['cnpj']);
+// $rua = addcslashes($_POST['rua']);
+// $bairro = addcslashes($_POST['bairro']);
+// $cidade = addcslashes($_POST['cidade']);
+// $nomeRes = addcslashes($_POST['nomeRes']);
+// $user = addcslashes($_POST['user']);
+// $pw = md5(addcslashes($_POST['password']));
+
+
+
+
+
+?>
