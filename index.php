@@ -6,7 +6,7 @@
   <div class="container">
     <h2>ÚLTIMAS NOTÍCAIS</h2>  
     
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 50%; margin: auto;">
       
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -18,6 +18,10 @@
       <div class="carousel-inner">
         <div class="item active">
           <img src="img/figura03.jpeg" alt="Los Angeles" width="1200" height="1000">
+            <div class="row">
+          
+             <h3>Ainda não é Cadastrado?</h3>
+           </div>
         </div>
     
          <div class="item">
