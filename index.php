@@ -4,7 +4,7 @@
 <main> 
 
   <div class="container">
-    <h2>ÚLTIMAS NOTÍCAIS</h2>  
+    <center><h2>ÚLTIMAS NOTÍCAIS</h2></center>
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 50%; margin: auto;">
       
@@ -49,21 +49,22 @@
   <div class="container">    
   <div class="row">
     <div class="col-sm-4">
-        <div>BLACK FRIDAY DEAL</div>
+        <div><h4>A.B.B inagura o seu espaço cultural</h4></div>
         <div>
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
+          <img src="img/figura0.jpg" class="img-responsive" style="width:100%" alt="Image">
+          <p><h5>A presidenta Duci Fontes e sua diretoria executiva, inaugurou, o Espaço Cultural da ABB, onde serão realizados cursos e oficinas.</h5> <a href="espacocultural.php">Saiba mais...</a></p>
         </div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">16/05/18 em Abreu lima </div>
     </div>
 
     <div class="col-sm-4">
-        <div>BLACK FRIDAY DEAL</div>
+        <div><h4>Associação dos pescadores promove cursos </h4></div> 
         <div>
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
+          <img src="img/figura00.png" class="img-responsive" style="width:100%" alt="Image"> <br>
+
+          <p><h5>Associação de pescadores em igarassu promove cursos atraves do programa do governo do estado de pernambuco chapéu de palha</h5> <a href="pescaartesanal.php">Saiba mais...</a></p>
         </div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">22/05/18 em Igarassu</div>
     </div>
     <div class="col-sm-4">
         <div>BLACK FRIDAY DEAL</div>
