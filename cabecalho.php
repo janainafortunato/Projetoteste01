@@ -27,7 +27,7 @@
           <div class="row">
             <div class="col col-lg-8">
               <ul class="nav navbar-nav">
-                <li><a href="index.php">Últimas Notícias</a></li>
+                <li><a href="index.php"><i class="fas fa-home"></i> Últimas Notícias</a></li>
                 <li><a href="cursos.php">Curso</a></li>
                 <li><a href="politica.php">Política</a></li>
                 <li><a href="esporte.php">Esporte</a></li>

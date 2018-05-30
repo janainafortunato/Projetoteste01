@@ -1,7 +1,6 @@
 <?php include "cabecalho.php";
 ?>
-<br>
-<br>
+<main>
 <div class="container">
 	<div class="col-sm-11"> 
 <center><div> 
@@ -22,7 +21,7 @@ A pauta da reunião foi a aprovação do novo ESTATUTO DA ASSOCIAÇÃO BETÂNIA 
        </div>
    </div>
 
-
+</main>
 <div style="margin-top:80px;">
 
 <?php include "rodape.php";

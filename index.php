@@ -52,7 +52,7 @@
         <div><h4>A.B.B inagura o seu espaço cultural</h4></div>
         <div>
           <img src="img/figura0.jpg" class="img-responsive" style="width:100%" alt="Image">
-          <p>A presidenta Duci Fontes e sua diretoria executiva, inaugurou, o Espaço Cultural da ABB, onde serão realizados cursos e oficinas.<a href="espacocultural.php">Saiba mais...</a></p>
+          <p>A presidenta Duci Fontes e sua diretoria executiva, inaugurou, o Espaço Cultural da ABB, onde serão realizados cursos e oficinas.<a href="noticias/espacocultural.php">Saiba mais...</a></p>
         </div>
         <div class="panel-footer">16/05/18 em Abreu lima </div>
     </div>
@@ -101,7 +101,7 @@
   </div>
 </div>
 
-  <div class="container">
+<!--   <div class="container">
 
     <div id="fb-root"></div>
 
@@ -114,7 +114,7 @@
       }(document, 'script', 'facebook-jssdk'));
       </script>
 
-    <div class="fb-comments" data-href="" data-numposts="5"></div>
+    <div class="fb-comments" data-href="" data-numposts="5"></div> -->
 
     <!-- <form action="" method="post">
       <div class="form-row">
@@ -141,7 +141,7 @@
               </div>
             </div>
     </form> -->
-  </div>
+  <!-- </div> -->
 <br>
 <br>  
   </main>

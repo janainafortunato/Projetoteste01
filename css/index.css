@@ -69,3 +69,13 @@ footer a:hover{
 .p-b-1{
   text-align: center;
 }
+
+.text{
+  font-size: 20px;
+  text-align: justify;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 30px;
+}
