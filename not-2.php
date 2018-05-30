@@ -1,26 +1,26 @@
 <?php include "cabecalho.php";
 ?>
-<br>
-<br>
+<main>
 <div class="container">
-	<div class="col-sm-11"> 
-<center><div> 
-   			<h3>Associação Beneficente Betânia-A.B.B</h3>
-   	</div> </center>
-    		<div>
-    			<img src="img/figura03.jpeg" class="img-responsive" style="width:100%" alt="Image"> <br> <br>
-					<p> <h4>O nosso principal objetivo é assegurar um atendimento de qualidade e com proficionais qualificados, sempre buscando inovar e melhorar nos serviços.</h4></p>
-    		</div>
-				<div class="panel-footer">fundada em 16/14/1961</div>
-            </div>
-       </div>
-   </div>
+	<div class="col-sm-12"> 
+    <div> 
+   		<h1 class="titulo">Associação Beneficente Betânia-A.B.B</h1>
+      <hr>
+   	</div>
+    
+    <div>
+    	<img src="img/figura03.jpeg" class="img-responsive" style="width:100%" alt="Image">
+			<hr>
+      <p class="text">O nosso principal objetivo é assegurar um atendimento de qualidade e com profissionais qualificados, sempre buscando inovar e melhorar nos serviços.</p>
+    </div>
+		
+    <div class="panel-footer">fundada em 16/14/1961</div>
+  </div>
 
+  <?php include 'sistema-coment-face.php';?>
 
-<br>
-<br>
-<br>
-
+</div>
+</main>
 
 <?php include "rodape.php";
 ?> 

@@ -17,7 +17,7 @@
       
       <div class="carousel-inner">
         <div class="item active">
-          <a href="espaco.php"><img src="img/figura03.jpeg" alt="Los Angeles" width="1200" height="1000"></a>
+          <a href="not-2.php"><img src="img/figura03.jpeg" alt="Los Angeles" width="1200" height="1000"></a>
             <div class="row">
           
              
@@ -25,11 +25,11 @@
         </div>
     
          <div class="item">
-          <a href="atersantos.php"><img src="img/figura01.jpeg" alt="Chicago" width="1200" height="1000"></a>
+          <a href="not-1.php"><img src="img/figura01.jpeg" alt="Chicago" width="1200" height="1000"></a>
         </div>
      
         <div class="item">
-          <a href="reuniao.php"><img src="img/figura09.jpeg" alt="New york" width="1200" height="1000"></a>
+          <a href="not-6.php"><img src="img/figura09.jpeg" alt="New york" width="1200" height="1000"></a>
         </div>
       </div>
     
@@ -52,7 +52,7 @@
         <div><h4>A.B.B inagura o seu espaço cultural</h4></div>
         <div>
           <img src="img/figura0.jpg" class="img-responsive" style="width:100%" alt="Image">
-          <p>A presidenta Duci Fontes e sua diretoria executiva, inaugurou, o Espaço Cultural da ABB, onde serão realizados cursos e oficinas.<a href="noticias/espacocultural.php">Saiba mais...</a></p>
+          <p>A presidenta Duci Fontes e sua diretoria executiva, inaugurou, o Espaço Cultural da ABB, onde serão realizados cursos e oficinas.<a href="not-3.php">Saiba mais...</a></p>
         </div>
         <div class="panel-footer">16/05/18 em Abreu lima </div>
     </div>
@@ -62,7 +62,7 @@
         <div>
           <img src="img/figura00.png" class="img-responsive" style="width:100%" alt="Image"> <br>
 
-          <p>Associação de pescadores em igarassu promove cursos atraves do programa govenamental do estado de pernambuco chapéu de palha<a href="pescaartesanal.php">Saiba mais...</a></p>
+          <p>Associação de pescadores em igarassu promove cursos atraves do programa govenamental do estado de pernambuco chapéu de palha<a href="not-5.php">Saiba mais...</a></p>
         </div>
         <div class="panel-footer">22/05/18 em Igarassu</div>
     </div>
@@ -70,7 +70,7 @@
         <div><h4>Sela um colaborador </h4></div>
         <div>
           <img src="img/figura05.png" class="img-responsive" style="width:75%" alt="Image"> <br>
-          <p>O Pão da Vida desenvolve projetos em diferentes áreas e precisa de pessoas dispostas a colaborar. Se você tem algum talento: artistico, profissional e deseja ajudar,<a href="paodavida.php">Saiba mais...</a></p>
+          <p>O Pão da Vida desenvolve projetos em diferentes áreas e precisa de pessoas dispostas a colaborar. Se você tem algum talento: artistico, profissional e deseja ajudar,<a href="not-4.php">Saiba mais...</a></p>
         </div>
         <div class="panel-footer">23/05/18 em Igarassu</div>
     </div>
