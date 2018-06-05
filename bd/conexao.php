@@ -1,13 +1,26 @@
 <?php
-try{
-	// $pdo = new PDO("mysql:host=localhost:3306;dbname=id5794465_camila","id5794465_root","24682468");
-	$pdo = new PDO("mysql:host=localhost:3306;dbname=camila","root","ifpe");
+// try{
+// 	// $pdo = new PDO("mysql:host=localhost:3306;dbname=id5794465_camila","id5794465_root","24682468");
+// 	$pdo = new PDO("mysql:host=localhost:3306;dbname=camila","root","ifpe");
 	
-}catch(PDOException $e){
-	echo $e->getMessage();
-}
+// }catch(PDOException $e){
+// 	echo $e->getMessage();
+// }
 
 
+
+	$dbname = "camila";
+	$usuario="root";
+	$senha = "ifpe";
+	
+try {
+	  	$conn = new PDO("mysql:host=localhost;dbname=$dbname", $usuario, $senha);
+	  	// $conn = new PDO("mysql:host=localhost:3306;dbname=id5794465_camila","id5794465_root","24682468");
+	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch(PDOException $e) {
+	    echo 'ERROR: ' . $e->getMessage();
+	}
+ 
 
 
 // $sql = "INSERT INTO `TB_ASSOCIACOES`(`NOME_FANTASIA`, `CNPJ`, `TELEFONE`, `CELULAR`, `FACEBOOK`, `RUA`, `BAIRRO`, `CIDADE`, `NOME_RESPONSAVEL`, `EMAIL`, `SENHA`) VALUES ('nome','1234','(83)982938','(81)9898','camila.facebook','rua de camila','bairro de camila','cidade de camila','responsavel','camila@gmail.com','senhaCamila')";

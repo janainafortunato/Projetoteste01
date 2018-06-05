@@ -1,55 +1,59 @@
 <?php
+include 'bd/conexao.php';
 
-include 'init.php';
+$nomeFan = addslashes($_POST['nomeFan']);
+$cnpj = addslashes($_POST['cnpj']);
+$fone = addslashes($_POST['fone']);
+$cel = addslashes($_POST['cel']);
+$face = addslashes($_POST['face']);
+$rua = addslashes($_POST['rua']);
+$bairro = addslashes($_POST['bairro']);
+$cidade = addslashes($_POST['cidade']);
+$nomeRes = addslashes($_POST['nomeRes']);
+$user = addslashes($_POST['user']);
+$pw = md5(addslashes($_POST['password']));
 
-$nomeFan = $_POST['nomeFan'];
-$fone = $_POST['fone'];
-$cel = $_POST['cel'];
-$face = $_POST['face'];
-$cnpj = $_POST['cnpj'];
-$rua = $_POST['rua'];
-$bairro = $_POST['bairro'];
-$cidade = $_POST['cidade'];
-$nomeRes = $_POST['nomeRes'];
-$user = $_POST['user'];
-$pw = $_POST['password'];
+$sql = "INSERT INTO TB_ASSOCIACOES (NOME_FANTASIA, CNPJ, TELEFONE, CELULAR, FACEBOOK, RUA, BAIRRO, CIDADE, NOME_RESPONSAVEL, EMAIL, SENHA) VALUES(:nomeFan, :cnpj, :fone, :cel, :face, :rua, :bairro, :cidade, :nomeRes, :user, :pw)";
 
-$associacoes = $user.",".$pw. ",".$nomeFan.",".$fone.",".$cel.",".$face.",".$cnpj.",".$rua.",".$bairro.",". $cidade.",".$nomeRes;
+$stmt = $conn->prepare( $sql );
 
-$date = file('accociacoes.csv' );
-$date [] = $usuarios."\n";
-$date_str = implode('',$date);
+$stmt->bindParam( ':nomeFan', $nomeFan );
+$stmt->bindParam( ':cnpj', $cnpj );
+$stmt->bindParam( ':fone', $fone );
+$stmt->bindParam( ':cel', $cel);
+$stmt->bindParam( ':face', $face);
+$stmt->bindParam( ':rua', $rua);
+$stmt->bindParam( ':bairro', $bairro);
+$stmt->bindParam( ':cidade', $cidade);
+$stmt->bindParam( ':nomeRes', $nomeRes);
+$stmt->bindParam( ':user', $user);
+$stmt->bindParam( ':pw', $pw);
 
-file_put_contents('associacoes.csv', $date_str);
+$result = $stmt->execute();
+if ( ! $result ){
+	var_dump( $stmt->errorInfo() );
+	exit;
+}
 
-$usuarios = $user.",".$pw;
+header('location:form-login.php');
 
-$date = file('usuarios.csv' );
-$date [] = $usuarios."\n";
-$date_str = implode('',$date);
+// $nomeFan = addslashes($_POST['nomeFan']);
+// $cnpj = addslashes($_POST['cnpj']);
+// $fone = addslashes($_POST['fone']);
+// $cel = addslashes($_POST['cel']);
+// $face = addslashes($_POST['face']);
+// $rua = addslashes($_POST['rua']);
+// $bairro = addslashes($_POST['bairro']);
+// $cidade = addslashes($_POST['cidade']);
+// $nomeRes = addslashes($_POST['nomeRes']);
+// $user = addslashes($_POST['user']);
+// $pw = md5(addslashes($_POST['password']));
 
-file_put_contents('usuarios.csv', $date_str);
-
-redirect('form-login.php');
-
-
-?>
-<?php
-
-// $nomeFan = addcslashes($_POST['nomeFan']);
-// $fone = addcslashes($_POST['fone']);
-// $cel = addcslashes($_POST['cel']);
-// $face = addcslashes($_POST['face']);
-// $cnpj = addcslashes($_POST['cnpj']);
-// $rua = addcslashes($_POST['rua']);
-// $bairro = addcslashes($_POST['bairro']);
-// $cidade = addcslashes($_POST['cidade']);
-// $nomeRes = addcslashes($_POST['nomeRes']);
-// $user = addcslashes($_POST['user']);
-// $pw = md5(addcslashes($_POST['password']));
+// $pdo->query("INSERT INTO TB_ASSOCIACOES SET NOME_FANTASIA='$nomeFan', CNPJ='$cnpj', TELEFONE='$fone', CELULAR='$cel', FACEBOOK='$face', RUA='$rua', BAIRRO='$bairro', CIDADE='$cidade',$cidade, NOME_RESPONSAVEL='$nomeRes', EMAIL='$user', SENHA='$pw'");
 
 
-
+	
+// 	header('location:form-login.php');
 
 
 ?>
