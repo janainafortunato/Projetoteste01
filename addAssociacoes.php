@@ -37,23 +37,4 @@ if ( ! $result ){
 
 header('location:form-login.php');
 
-// $nomeFan = addslashes($_POST['nomeFan']);
-// $cnpj = addslashes($_POST['cnpj']);
-// $fone = addslashes($_POST['fone']);
-// $cel = addslashes($_POST['cel']);
-// $face = addslashes($_POST['face']);
-// $rua = addslashes($_POST['rua']);
-// $bairro = addslashes($_POST['bairro']);
-// $cidade = addslashes($_POST['cidade']);
-// $nomeRes = addslashes($_POST['nomeRes']);
-// $user = addslashes($_POST['user']);
-// $pw = md5(addslashes($_POST['password']));
-
-// $pdo->query("INSERT INTO TB_ASSOCIACOES SET NOME_FANTASIA='$nomeFan', CNPJ='$cnpj', TELEFONE='$fone', CELULAR='$cel', FACEBOOK='$face', RUA='$rua', BAIRRO='$bairro', CIDADE='$cidade',$cidade, NOME_RESPONSAVEL='$nomeRes', EMAIL='$user', SENHA='$pw'");
-
-
-	
-// 	header('location:form-login.php');
-
-
 ?>

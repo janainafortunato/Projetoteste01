@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username ="root";
-$password ="ifpe";
-$dbname = "CAMILA";
+$username ="id5794489_camila";
+$password ="janaina";
+$dbname = "id5794489_camila";;
 $connection = mysqli_connect($servername, $username, $password, $dbname);
 if (!$connection) {
 	die("Connection failed: " . mysqli_connect_error());
@@ -15,7 +15,7 @@ if (!$connection) {
 <title>   </title>
 <link href="estilo.css" rel="stylesheet" type="text/css"/>     
 <body>
-	<h2>Sistema Simples de Comentario</h2> 
+	<h2>Faça um comentario !</h2> 
 	<?php  
 
     $query = "SELECT * FROM `tb_comentarios` WHERE status='ativo'"; // parte do banco que faz conexão com o banco de dados para armazenar os comentarios
@@ -58,10 +58,9 @@ if (!$connection) {
 		$query = "DELETE FROM tb_comentarios WHERE id='$idExcluir'";
 		$result = mysqli_query($connection, $query);
 		if ($result) {
-			echo"<script > alert (\"excluido com sucesso!\");</script>";
-			header('location: comentario.php');
+			echo"<script > alert (\"editado com sucesso!\");</script>";
+		//	header('location: comentario.php');
 		}
-
 	}
 	?>
 
@@ -71,7 +70,7 @@ if (!$connection) {
 		<input type="text" id="nome" name="nome" maxlength="100" /><br/>
 		<label for="comment">Comentario:</label><br/>
 		<textarea name="msg" id="comment" cols="100" rows="4"></textarea>   <!-- amanho da caixa de texto para inserir o texto do comentario -->
-		<input type="hidden" name="acao" value="preenchido"/>
+		<input type="hidden" name="acao" value="preenchido"/></label></br>
 		<input type="submit" class" class="btn" value="Enviar" />  <!-- Botão para envia comentario -->
 	</form>
 
@@ -84,9 +83,9 @@ if (!$connection) {
 // bloco de codigo para inserir no banco de dados os comentarios   -->
 if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
 	$servername = "localhost";
-	$username ="root";
-	$password ="ifpe";
-	$dbname = "CAMILA";
+	$username ="id5794489_camila";
+	$password ="janaina";
+	$dbname = "id5794489_camila";
 	$connection = mysqli_connect($servername, $username, $password, $dbname);
 	if (!$connection) {
 		die("Connection failed: " . mysqli_connect_error());
@@ -106,8 +105,9 @@ if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
    	$query = "INSERT INTO `tb_comentarios` (`nome`,`comentarios`,`status`) VALUES ('$nome', '$comentario','$status')";
    	$result = mysqli_query($connection, $query);
    	if($result) {
-	    echo "<script>alert('enviando com sucesso!');</script>"; // mensagem para informa que a mensagem foi enviada com sucesso para ser postada como comentario -->
-	    header('location: comentario.php');
+	  echo "<script>alert('enviando com sucesso!');</script>"; // mensagem para informa que a mensagem foi enviada com sucesso para ser postada como comentario -->
+	    //header('location: comentario.php');
+	     
    	} else {
    		echo "nao enviado";
    	}
