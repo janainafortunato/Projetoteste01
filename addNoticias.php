@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'bd/conexao.php';
 ?>
 <?php
@@ -7,16 +8,16 @@ $titulo=addslashes($_POST['titulo']);
 $subtitulo=addslashes($_POST['subtitulo']);
 $file=addslashes($_POST['file']);
 $texto=addslashes($_POST['texto']);
-// $email = $_SESSION['user'];
+$email = $_SESSION['user'];
 
 
- //$select = $conn->query("SELECT ID FROM TB_ASSOCIACOES WHERE EMAIL='$email'");
- //$result = $select->fetch(PDO::FETCH_ASSOC);
+ $stmt = $conn->prepare("SELECT ID_ASSOC FROM TB_ASSOCIACOES WHERE EMAIL='$email'");
+ $stmt->execute();
+ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
- // print_r($result);
+$id_assoc = $result['ID_ASSOC'];
 
-
-$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, TEXTO, ARQUIVO) VALUES(:categoria, :titulo, :subtitulo, :file, :texto)";
+$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, TEXTO, ARQUIVO, NOT_ASSOC_ID) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
 $stmt = $conn->prepare( $sql );
 
 $stmt->bindParam( ':categoria', $categoria);
@@ -24,7 +25,7 @@ $stmt->bindParam( ':titulo', $titulo);
 $stmt->bindParam( ':subtitulo', $subtitulo);
 $stmt->bindParam( ':file', $file);
 $stmt->bindParam( ':texto', $texto);
-//$stmt->bindParam( ':ID', $result);
+$stmt->bindParam( ':assoc_id', $id_assoc);
 
 $result = $stmt->execute();
 if ( ! $result ){

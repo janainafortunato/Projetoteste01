@@ -64,7 +64,7 @@ include_once "bd/conexao.php"
 	         <div id="exibe">
 	         	<p>nome:<?php echo $name; ?></p> 
 	         	<p>Comentario:<?php echo $_comentario; ?></p>
-	         	<a href="?action=excluir&id=<?php echo $id; ?> " class= "excluir">Editar </a>
+	         	<a href="?action=excluir&id=<?php echo $id; ?> " class= "excluir">Excluir</a>
 	         </div>
 	         <?php
 	      }
