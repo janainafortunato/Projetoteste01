@@ -21,7 +21,7 @@ if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
 	unset($_POST['acao']);
 }
 
-header('location:index.php');;
+header('location:index.php');
 
 ?>
 

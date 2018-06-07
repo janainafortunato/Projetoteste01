@@ -121,25 +121,3 @@
   </div>
 </form>
 </div>
-
-
-<!-- <div id="comment-container"  style ="display: block; background-color: transparent; border:1px solid black; height: 250px; width: 550px;">
-  <h1 style="background-color: #264899;color: white">Comentários sobre a balada </h1>
-  
-  <div id="comments" style="width: inherit; height: 160px; overflow-y: scroll; background-color: transparent;"> 
-                          <?php 
-                          $consult = $conn->prepare("SELECT * FROM TB_COMENTARIO WHERE COM_NOME='$nomeComent' AND COM_COMENTARIO='$coment'");
-                          $consult->execute();
-                          $i = 0;
-                          $results=$consult->fetchAll();
-                          foreach ($results as $result) {
-                            $user = $result['usuarios_id'];
-                            $consulta = $conn->prepare("select usuario from usuarios where id = '$user'");
-                            $consulta->execute();
-                            $res = $consulta->fetch(PDO::FETCH_ASSOC);
-                            echo "<p><b>" .$res['usuario'] . "</b>: " . $result['texto'] . "</p>";
-                            $i++;
-                          }
-                          ?>
-                        </div>
-                      </div> -->
