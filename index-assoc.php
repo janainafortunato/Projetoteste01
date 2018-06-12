@@ -77,18 +77,38 @@ include 'bd/conexao.php';
     <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+        <h4 class="modal-title custom_align" id="Heading">Edite sua publicação</h4>
       </div>
           <div class="modal-body">
+
+<div class="form-group">
+              <label>Classifique a nóticia</label>
+        <select class="selectpicker" name="categoria">
+          <option>Cursos</option>
+          <option>Reuniões</option>
+          <option>Esporte</option>
+          <option>Projetos</option>
+          <option>Ações Sociais</option>
+        </select>  
+
+</div>
+
+
           <div class="form-group">
-        <input class="form-control " type="text" placeholder="Mohsin">
+          <label>Título</label>
+        <input class="form-control " type="text">
         </div>
         <div class="form-group">
-        
-        <input class="form-control " type="text" placeholder="Irshad">
+        <label>Subtítulo</label>
+        <input class="form-control " type="text">
         </div>
         <div class="form-group">
-        <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
+        <label>Escolha outro arquivo</label>
+        <input type="file" name="file" />
+        </div>
+        <div class="form-group">
+        <label>Texto da notícia</label>
+        <textarea rows="2" class="form-control"></textarea>
     
         
         </div>
