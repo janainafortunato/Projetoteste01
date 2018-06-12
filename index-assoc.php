@@ -4,63 +4,59 @@ include_once 'cabecalho.php';
 include 'bd/conexao.php';
 ?>
 
-<?php
-
-// $query = "SELECT * FROM TB_NOTOCIAS";
-// $stmt = $conn->prepare($query);
-// $res = $stmt->execute();
-// $rows = $stmt->rowCount();
-
-?>
-
 <div class="container">
-	<div class="row">
-		
+  <div class="row">
     </div>
-        <div class="col-md-12">
+      <div class="col-md-12">
         <h4><i class="fas fa-th-list"></i> Minhas Notícias</h4>
         <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+              <th>ID</th>
+                <th>Título</th>
+                <th>Data</th>
+                <th>Editar</th>
+                <th>Deletar</th>
+                <th>Publicar</th>
+              </thead>
+              
+              <?php
+                $query = "SELECT * FROM TB_NOTICIAS";
+                $stmt = $conn->prepare($query);
+                $res = $stmt->execute();
+                $rows = $stmt->rowCount();
+  
+                  if ($rows <=0) {
+                      echo "<tbody>
+                              <tr>
+                                <td>Você ainda não possui notícias cadastradas.</td>
+                              <tr>
+                            </tbody>";
+                  } else{
+              ?>
+              
+              <?php
+                while ($campos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      $id = $campos['ID_NOT'];
+                      $titulo = $campos['TITULO'];
+                      $data = $campos['DATA'];
 
-                
-              <table id="mytable" class="table table-bordred table-striped">
-                   
-                <thead>
-                  <th>ID</th>
-                  <th>Título</th>
-                  <th>Data</th>
-                  <th>Editar</th>
-                  <th>Deletar</th>
-                  <th>Publicar</th>
-                </thead>
-    <tbody>
-    
-    <tr>
-    <td>1</td>
-    <td>Lorem ipsum</td>
-    <td>23/06/208</td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Editar"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><button class="btn btn-success btn-xs" data-title="Publicar" data-toggle="modal" data-target="#publicar" ><i class="fas fa-check-square"></i></span></button></p></td>
-    </tr>
-    
- 		<tr>
-    <td>1</td>
-    <td>Lorem ipsum</td>
-    <td>23/06/208</td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Editar"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><button class="btn btn-success btn-xs" data-title="Publicar" data-toggle="modal" data-target="#publicar" ><i class="fas fa-check-square"></i></span></button></p></td>
-    </tr>
-    
-    
- 		<tr>
-    <td>1</td>
-    <td>Lorem ipsum</td>
-    <td>23/06/208</td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Editar"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><button class="btn btn-success btn-xs" data-title="Publicar" data-toggle="modal" data-target="#publicar" ><i class="fas fa-check-square"></i></span></button></p></td>
-    </tr>
+              ?>
+
+              <tbody>
+                <tr>
+                  <td><?php echo $id; ?></td>
+                  <td><?php echo $titulo; ?></td>
+                  <td><?php echo $data; ?></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Editar"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><button class="btn btn-success btn-xs" data-title="Publicar" data-toggle="modal" data-target="#publicar" ><i class="fas fa-check-square"></i></span></button></p></td>
+                 </tr>
+              <?php
+               }
+            }
+
+            ?>
   </tbody>
         
 </table>
@@ -165,32 +161,11 @@ include 'bd/conexao.php';
     </div>
 
 
-<!-- <div style="margin-top:450px;"> -->
+<div style="margin-top:250px;">
 
 <?php
 include 'rodape.php';
 ?>
-<div>
-	<script src="">
-		$(document).ready(function(){
-$("#mytable #checkall").click(function () {
-        if ($("#mytable #checkall").is(':checked')) {
-            $("#mytable input[type=checkbox]").each(function () {
-                $(this).prop("checked", true);
-            });
-
-        } else {
-            $("#mytable input[type=checkbox]").each(function () {
-                $(this).prop("checked", false);
-            });
-        }
-    });
-    
-    $("[data-toggle=tooltip]").tooltip();
-});
-
-		
-	</script>
 
 </body>
 </html>
