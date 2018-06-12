@@ -15,9 +15,14 @@
       </ol>
     
       
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox" >
         <div class="item active">
           <a href="not-2.php"><img src="img/figura03.jpeg" alt="Los Angeles" width="1200" height="1000"></a>
+          <div class="carousel-caption">
+            <h4 style="font-size: 25px">Associação Beneficente Betânia-A.B.B</h4>
+        
+      </div>
+
             <div class="row">
           
              
@@ -26,12 +31,22 @@
     
          <div class="item">
           <a href="not-1.php"><img src="img/figura01.jpeg" alt="Chicago" width="1200" height="1000"></a>
+          <div class="carousel-caption">
+        <h3 style="font-size: 25px">Feira de artesanato dos associados da associação Betânia</h3> 
+        
+      </div>
+
         </div>
      
         <div class="item">
           <a href="not-6.php"><img src="img/figura09.jpeg" alt="New york" width="1200" height="1000"></a>
-        </div>
+       <div class="carousel-caption">
+        <h4 style="font-size: 25px">Atendimento Médico</h4>
+        
       </div>
+
+        </div>
+        </div>
     
       
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
