@@ -48,9 +48,9 @@ include 'bd/conexao.php';
                   <td><?php echo $id; ?></td>
                   <td><?php echo $titulo; ?></td>
                   <td><?php echo $data; ?></td>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Editar"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><button class="btn btn-success btn-xs" data-title="Publicar" data-toggle="modal" data-target="#publicar" ><i class="fas fa-check-square"></i></span></button></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Editar"><a href="form-editar-not.php?id=<?=$id?>" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
                  </tr>
               <?php
                }
@@ -66,7 +66,8 @@ include 'bd/conexao.php';
   
   <!-- formulário de edição -->
   <?php
-    // // pega o ID da URL
+
+    // pega o ID da URL
     // $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
     // //Valida a variavel da URL
     // if (empty($id)){
@@ -76,12 +77,12 @@ include 'bd/conexao.php';
 
     // $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO FROM TB_NOTICIAS WHERE ID_NOT='$id'";
     // $result = $conn->prepare($sql);
-    // $result->bindParam()
+    // $result->bindParam();
 
   ?>
 
 
-  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+<!--   <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

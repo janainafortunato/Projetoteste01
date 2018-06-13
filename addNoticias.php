@@ -6,7 +6,7 @@ include 'bd/conexao.php';
 $categoria=addslashes($_POST['categoria']);
 $titulo=addslashes($_POST['titulo']);
 $subtitulo=addslashes($_POST['subtitulo']);
-$file=addslashes($_POST['file']);
+// $file=addslashes($_POST['fil e']);
 $texto=addslashes($_POST['texto']);
 $email = $_SESSION['user'];
 
@@ -17,13 +17,13 @@ $email = $_SESSION['user'];
 
 $id_assoc = $result['ID_ASSOC'];
 
-$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, TEXTO, ARQUIVO, NOT_ASSOC_ID) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
+$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, NOT_ASSOC_ID) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
 $stmt = $conn->prepare( $sql );
 
 $stmt->bindParam( ':categoria', $categoria);
 $stmt->bindParam( ':titulo', $titulo);
 $stmt->bindParam( ':subtitulo', $subtitulo);
-$stmt->bindParam( ':file', $file);
+$stmt->bindParam( ':file', file_get_contents($_FILES['file']['tmp_name']));
 $stmt->bindParam( ':texto', $texto);
 $stmt->bindParam( ':assoc_id', $id_assoc);
 
