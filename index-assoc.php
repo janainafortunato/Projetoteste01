@@ -7,7 +7,15 @@ include 'bd/conexao.php';
 <div class="container">
   <div class="row">
     </div>
-      <div class="col-md-12">
+      <div class="col-md-3">
+        <div class="card">
+            <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+              <h1>John Doe</h1>
+              <p class="title">CEO & Founder, Example</p>
+              <p>Harvard University</p>
+            </div>
+  <div style="margin: 24px 0;">
+         <div class="col-md-9">
         <h4><i class="fas fa-th-list"></i> Minhas Notícias</h4>
         <div class="table-responsive">
           <table id="mytable" class="table table-bordred table-striped">
