@@ -21,7 +21,7 @@ include 'bd/conexao.php';
               </thead>
               
               <?php
-                $query = "SELECT * FROM TB_NOTICIAS";
+                $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE NOT_ASSOC_ID = ID_ASSOC";
                 $stmt = $conn->prepare($query);
                 $res = $stmt->execute();
                 $rows = $stmt->rowCount();

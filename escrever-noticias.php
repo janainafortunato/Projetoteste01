@@ -6,7 +6,7 @@
       
       <h1>Publicar Notícias</h1> 
       
-      <form action="addNoticias.php" method="POST">
+      <form action="addNoticias.php" method="POST" enctype="multpart/form-data">
       
         <label>Classifique a nóticia</label>
         <select class="selectpicker" name="categoria">
@@ -33,13 +33,13 @@
             <br>
             
             <div>
-              <input type="file" name="file" />
+              <input type="file" name="file">
             </div>
             <br>
             
             <div>
               <label>Digite a Nóticia</label>
-              <textarea rows="10" cols="60" maxlength="400" name="texto"></textarea>
+              <textarea rows="10" cols="60" name="texto"></textarea>
               <button>Salvar</button> <br>
             </div>   
           </div>
@@ -56,3 +56,4 @@ include 'rodape.php';
 <div>
 </body>
 </html>
+<!-- maxlength="400" -->
