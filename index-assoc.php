@@ -48,8 +48,9 @@ include 'bd/conexao.php';
                 while ($campos = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       $id = $campos['ID_NOT'];
                       $titulo = $campos['TITULO'];
-                      date_default_timezone_set('America/Sao_Paulo');
-                      $data = date('Y-m-d H:i');
+                      $data = $campos['DATA'];
+                      // date_default_timezone_set('America/Sao_Paulo');
+                      // $data = date('Y-m-d H:i');
               ?>
 
               <tbody>
