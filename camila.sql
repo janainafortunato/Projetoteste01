@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
 --
 -- Host: localhost    Database: camila
 -- ------------------------------------------------------
--- Server version	5.7.21-0ubuntu0.16.04.1
+-- Server version	5.7.22-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -38,7 +38,7 @@ CREATE TABLE `TB_ASSOCIACOES` (
   PRIMARY KEY (`ID_ASSOC`),
   UNIQUE KEY `UQ_CNPJ` (`CNPJ`),
   UNIQUE KEY `UQ_EMAIL` (`EMAIL`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `TB_ASSOCIACOES` (
 
 LOCK TABLES `TB_ASSOCIACOES` WRITE;
 /*!40000 ALTER TABLE `TB_ASSOCIACOES` DISABLE KEYS */;
-INSERT INTO `TB_ASSOCIACOES` VALUES (5,'associaÃ§Ã£o camila','11111111111','2222222222','33333333','facebook/camila','rua assoc','Pilar','assoc','camila','camila.rs122@gmail.com','202cb962ac59075b964b07152d234b70');
+INSERT INTO `TB_ASSOCIACOES` VALUES (5,'associaÃ§Ã£o camila','11111111111','2222222222','33333333','facebook/camila','rua assoc','Pilar','assoc','camila','camila.rs122@gmail.com','202cb962ac59075b964b07152d234b70'),(6,'sgsdahafhfdh','addhfdhdsdf','fdhshdhdh','fdfhdfdherr','rhrdffsdh','sdffdhhddfhd','sdfhfdhdfh','fdhsdfhs','dfhdfhfdhdfhsdhd','camila.rs122@hotmail.com','202cb962ac59075b964b07152d234b70');
 /*!40000 ALTER TABLE `TB_ASSOCIACOES` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,10 +93,11 @@ CREATE TABLE `TB_NOTICIAS` (
   `TEXTO` text NOT NULL,
   `ARQUIVO` longblob,
   `NOT_ASSOC_ID` int(11) NOT NULL,
+  `DATA` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID_NOT`),
   KEY `NOT_ASSOC_FK` (`NOT_ASSOC_ID`),
   CONSTRAINT `NOT_ASSOC_FK` FOREIGN KEY (`NOT_ASSOC_ID`) REFERENCES `TB_ASSOCIACOES` (`ID_ASSOC`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +106,7 @@ CREATE TABLE `TB_NOTICIAS` (
 
 LOCK TABLES `TB_NOTICIAS` WRITE;
 /*!40000 ALTER TABLE `TB_NOTICIAS` DISABLE KEYS */;
-INSERT INTO `TB_NOTICIAS` VALUES (1,'Esporte','O que Ã© Lorem Ipsum?','camila','','Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.',5);
+INSERT INTO `TB_NOTICIAS` VALUES (1,'Esporte','O que Ã© Lorem Ipsum?','camila','','Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.',5,'2018-06-14 03:01:06'),(2,'Esporte','jghjhgjhddjhgdj','djdjhdjfhj','fdhdjkhkkjkhisureiuiykejkhdjhkfnfnmcnmncdih irujdkh jdkfjh kjkjh kjfkhjf kjkh k kjhkdfjkh kjkhj kjkhf  jfkjh kjjkhfjkh k kfjk hsjkhj skjkhsjh jkjh skhs shjhs ','',5,'2018-06-14 03:01:06'),(3,'ReuniÃµes','CAMI','CMDGHSGJSGNMS','JGSJHGJGNMSNDGSJHDH','',6,'2018-06-14 03:01:06'),(4,'Cursos','GDSGSGS','GSGGS','HFFHAHFAHFFFH','',6,'2018-06-14 03:32:40');
 /*!40000 ALTER TABLE `TB_NOTICIAS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -118,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-11 11:24:44
+-- Dump completed on 2018-06-14  0:48:46
