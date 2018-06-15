@@ -57,7 +57,7 @@ include 'cabecalho.php';
             <br>
             
             <div>
-              <input type="text" name="file" value="<?php echo $resultado['TEXTO']; ?>">
+              <input type="text" name="file" value="<?php echo $resultado['ar']; ?>">
             </div>
             <br>
             

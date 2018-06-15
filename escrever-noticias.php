@@ -33,7 +33,9 @@
             <br>
             
             <div>
-              <input type="file" name="file">
+              <input type="file" name="file" id="imgInp">
+              <!-- <input type="text" class="form-control" readonly> -->
+              <img id='img-upload'/>
             </div>
             <br>
             
@@ -54,6 +56,23 @@
 include 'rodape.php';
 ?>
 <div>
+  <script type="text/javascript" >
+    $(document).ready( function() {
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#img-upload').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#imgInp").change(function(){
+        readURL(this);
+      });   
+    });
+
+  </script>
 </body>
 </html>
 <!-- maxlength="400" -->
