@@ -15,7 +15,8 @@ include 'cabecalho.php';
       <div>
       <br>
         <p><i class="fas fa-envelope"></i> camila.rs122@gmail.com</p>
-        <p><i class="fab fa-whatsapp"></i> 081 98461 6717</p>
+        <a href="https://www.linkedin.com/in/camila-rodrigues-567566161/"><i class="fab fa-linkedin fa-2x" style="color: black"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5581984616717" title="Whatsapp"><i class="fab fa-whatsapp fa-2x" style="color: black"></i></a>
         <a href="https://github.com/camilars" data-placement="top" data-toggle="tooltip" title="Github"><i class="fab fa-github fa-2x" style="color: black" ></i></a>
       </div>
     </div>
@@ -26,7 +27,7 @@ include 'cabecalho.php';
       <div>
       <br>
         <p><i class="fas fa-envelope"></i> suellen1718@gmail.com</p>
-        <p><i class="fab fa-whatsapp"></i> 081 98971 5026</p>
+        <a href="https://api.whatsapp.com/send?phone=5581989715026" title="Whatsapp"><i class="fab fa-whatsapp fa-2x" style="color: black"></i></a>
         <a href="https://github.com/suellennn" data-placement="top" data-toggle="tooltip" title="Github"><i class="fab fa-github fa-2x" style="color: black" ></i></a>
       </div>
     </div>
@@ -37,7 +38,7 @@ include 'cabecalho.php';
       <div>
       <br>
         <p><i class="fas fa-envelope"></i> janiovinicius17@gmail.com</p>
-        <p><i class="fab fa-whatsapp"></i> 081 98676 9119</p>
+        <a href="https://api.whatsapp.com/send?phone=5581986769119" title="Whatsapp"><i class="fab fa-whatsapp fa-2x" style="color: black"></i></a>
         <a href="https://github.com/janiio" data-placement="top" data-toggle="tooltip" title="Github"><i class="fab fa-github fa-2x" style="color: black" ></i></a>
       </div>
     </div>
@@ -48,7 +49,7 @@ include 'cabecalho.php';
       <div>
       <br>
         <p><i class="fas fa-envelope"></i> @gmail.com</p>
-        <p><i class="fab fa-whatsapp"></i> 081 99799 3278</p>
+        <a href="https://api.whatsapp.com/send?phone=5581997993278" title="Whatsapp"><i class="fab fa-whatsapp fa-2x" style="color: black"></i></a>
         <a href="https://github.com/janainafortunato" data-placement="top" data-toggle="tooltip" title="Github"><i class="fab fa-github fa-2x" style="color: black" ></i></a>
       </div>
     </div>
