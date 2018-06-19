@@ -93,3 +93,26 @@ footer a:hover{
   text-align: justify;
   font-size: 15px;
 }
+
+.jumbotron{
+  background:#3d6277;
+  height: 150px;
+  padding-top: 1px;
+
+ }
+
+ #logo{
+  color:white;
+  font-size: 40px;
+ }
+
+#tamanho{
+  color:white;
+  font-size: 20px;
+}
+
+.btn{
+  background: #2d4958;
+  color: white;
+
+}

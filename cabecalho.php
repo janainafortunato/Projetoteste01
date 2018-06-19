@@ -18,8 +18,8 @@
       
     </header>
       <div class="jumbotron text-center">
-        <h1>Dia-a-dia Associações</h1>
-        <p>Veja as últimas notícias e acompanhe o que esta acontecendo na associação do seu bairro.</p> 
+        <h1 id="logo">Dia-a-dia Associações</h1>
+        <p id="tamanho">Veja as últimas notícias e acompanhe o que esta acontecendo na associação do seu bairro.</p> 
       </div>
 
       <nav class="navbar navbar-inverse navbar">

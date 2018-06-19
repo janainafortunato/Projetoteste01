@@ -4,45 +4,64 @@
    
     <div class="container">
       
-      <h1>Publicar Notícias</h1> 
+      <!-- <h1>Publicar Notícias</h1>  -->
       
       <form action="addNoticias.php" method="POST" enctype="multpart/form-data">
-      
-        <label>Classifique a nóticia</label>
-        <select class="selectpicker" name="categoria">
-          <option>Cursos</option>
-          <option>Reuniões</option>
-          <option>Esporte</option>
-          <option>Projetos</option>
-          <option>Ações Sociais</option>
-        </select>  
-        <br>
-        <br>
-        <div class="row">
-          <div class="col-sm-6">
-            <div>
-              <label>Digite o Título da nóticia</label>
-              <input type="text" name="titulo">
-            </div>
-            <br>
-            
-            <div>
-              <label>Digite o sub título da nóticia</label>
-              <input type="text" name="subtitulo">
-            </div>
-            <br>
-            
-            <div>
-              <input type="file" name="file" id="imgInp">
+        
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <h2>Escrever Notícias</h2>
+          </div>
+        </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <input type="file"  class="form-control-file" name="file" id="imgInp">
+          <br>
               <!-- <input type="text" class="form-control" readonly> -->
               <img id='img-upload'/>
-            </div>
-            <br>
-            
-            <div>
-              <label>Digite a Nóticia</label>
-              <textarea rows="10" cols="60" name="texto"></textarea>
-              <button>Salvar</button> <br>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label>Digite o Título da nóticia</label>
+          <input type="text" class="form-control" name="titulo">
+        </div>
+      </div>
+      
+       <div class="form-row">
+        <div class="form-group col-md-12">
+           <label>Digite o sub título da nóticia</label>
+          <input type="text" class="form-control" name="subtitulo">
+        </div>
+      </div>
+
+       <div class="form-row">
+        <div class="form-group col-md-12">
+           <label>Digite a Nóticia</label>
+          <textarea rows="10" cols="10" name="texto" class="form-control"></textarea>
+        </div>
+      </div> 
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+      <label for="sel2">Classifique a nóticia</label>
+      <select multiple class="form-control" id="sel2" name="categoria">
+        <option>Cursos</option>
+        <option>Reuniões</option>
+        <option>Esporte</option>
+        <option>Projetos</option>
+        <option>Ações Sociais</option>
+      </select>
+       </div>
+      </div> 
+      <div class="form-row">
+        <div class="form-group col-md-12">
+           <button class="btn">Salvar</button>
+        </div>
+      </div> 
+
+      
             </div>   
           </div>
         </div>

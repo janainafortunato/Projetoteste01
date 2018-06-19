@@ -79,7 +79,7 @@ include "cabecalho.php";
       
       <div class="form-row">
         <div class="form-group col-md-2">
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="submit" class="btn">Cadastrar</button>
         </div>
       </div>
     </form>
