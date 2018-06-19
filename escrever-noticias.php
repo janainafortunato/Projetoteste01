@@ -4,8 +4,6 @@
    
     <div class="container">
       
-      <!-- <h1>Publicar Notícias</h1>  -->
-      
       <form action="addNoticias.php" method="POST" enctype="multpart/form-data">
         
         <div class="form-row">
@@ -13,60 +11,56 @@
             <h2>Escrever Notícias</h2>
           </div>
         </div>
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <input type="file"  class="form-control-file" name="file" id="imgInp">
-          <br>
-              <!-- <input type="text" class="form-control" readonly> -->
-              <img id='img-upload'/>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Digite o Título da nóticia</label>
-          <input type="text" class="form-control" name="titulo">
-        </div>
-      </div>
-      
-       <div class="form-row">
-        <div class="form-group col-md-12">
-           <label>Digite o sub título da nóticia</label>
-          <input type="text" class="form-control" name="subtitulo">
-        </div>
-      </div>
-
-       <div class="form-row">
-        <div class="form-group col-md-12">
-           <label>Digite a Nóticia</label>
-          <textarea rows="10" cols="10" name="texto" class="form-control"></textarea>
-        </div>
-      </div> 
-
-      <div class="form-row">
-        <div class="form-group col-md-12">
-      <label for="sel2">Classifique a nóticia</label>
-      <select multiple class="form-control" id="sel2" name="categoria">
-        <option>Cursos</option>
-        <option>Reuniões</option>
-        <option>Esporte</option>
-        <option>Projetos</option>
-        <option>Ações Sociais</option>
-      </select>
-       </div>
-      </div> 
-      <div class="form-row">
-        <div class="form-group col-md-12">
-           <button class="btn">Salvar</button>
-        </div>
-      </div> 
-
-      
-            </div>   
+        
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="file"  class="form-control-file" name="file" id="imgInp">
+            <br>
+            <!-- <input type="text" class="form-control" readonly> -->
+            <img id='img-upload'/>
           </div>
         </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Digite o Título da nóticia</label>
+            <input type="text" class="form-control" name="titulo">
+          </div>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Digite o sub título da nóticia</label>
+            <input type="text" class="form-control" name="subtitulo">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Digite a Nóticia</label>
+            <textarea rows="10" cols="10" name="texto" class="form-control"></textarea>
+          </div>
+        </div> 
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="sel2">Classifique a nóticia</label>
+            <select multiple class="form-control" id="sel2" name="categoria">
+              <option>Cursos</option>
+              <option>Reuniões</option>
+              <option>Esporte</option>
+              <option>Projetos</option>
+              <option>Ações Sociais</option>
+            </select>
+          </div>
+        </div> 
+        
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <button class="btn">Salvar</button>
+          </div>
+        </div> 
       </form>
-    
     <div>
   
   </main>
@@ -74,7 +68,6 @@
 <?php
 include 'rodape.php';
 ?>
-<div>
   <script type="text/javascript" >
     $(document).ready( function() {
       function readURL(input) {

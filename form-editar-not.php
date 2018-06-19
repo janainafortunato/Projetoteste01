@@ -28,48 +28,63 @@ include 'cabecalho.php';
  
     <div class="container">
       
-      <h1>Edite sua notícia</h1>
+      
       
       <form action="editar-noticias.php" method="POST">
-      
-        <label>Classifique a nóticia</label>
-        <select class="selectpicker" name="categoria">
-          <option>Cursos</option>
-          <option>Reuniões</option>
-          <option>Esporte</option>
-          <option>Projetos</option>
-          <option>Ações Sociais</option>
-        </select>  
-        <br>
-        <br>
-        <div class="row">
-          <div class="col-sm-6">
-            <div>
-              <label>Título</label>
-              <input type="text" name="titulo" value="<?php echo $resultado['TITULO']; ?>">
-            </div>
-            <br>
-            
-            <div>
-              <label>Sub título</label>
-              <input type="text" name="subtitulo" value="<?php echo $resultado['SUBTITULO']; ?>">
-            </div>
-            <br>
-            
-            <div>
-              <input type="text" name="file" value="<?php echo $resultado['ar']; ?>">
-            </div>
-            <br>
-            
-            <div>
-              <label>Nóticia</label>
-              <textarea rows="10" cols="60" maxlength="400" name="texto">
-              	
-              </textarea>
-              <button>Salvar</button> <br>
-            </div>   
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <h2>Edite sua notícia</h2>
           </div>
         </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="file"  class="form-control-file" name="file" id="imgInp">
+            <br>
+            <img id='img-upload'/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Digite o Título da nóticia</label>
+            <input type="text" class="form-control" name="titulo" value="<?php echo $resultado['TITULO']; ?>">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Digite o sub título da nóticia</label>
+            <input type="text" class="form-control" name="subtitulo"  value="<?php echo $resultado['SUBTITULO']; ?>">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Digite a Nóticia</label>
+            <textarea rows="10" cols="10" name="texto" class="form-control"></textarea>
+          </div>
+        </div> 
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="sel2">Classifique a nóticia</label>
+            <select multiple class="form-control" id="sel2" name="categoria">
+              <option>Cursos</option>
+              <option>Reuniões</option>
+              <option>Esporte</option>
+              <option>Projetos</option>
+              <option>Ações Sociais</option>
+            </select>
+          </div>
+        </div> 
+      
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <button class="btn">Editar</button>
+          </div>
+        </div> 
       </form>
     
     <div>
@@ -79,7 +94,6 @@ include 'cabecalho.php';
 <?php
 include 'rodape.php';
 ?>
-<div>
 </body>
 </html>
 

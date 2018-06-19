@@ -40,7 +40,7 @@ include "cabecalho.php";
 
   </main>
   
-  <div style="margin-top:170px;">
+  <div style="margin-top:300px;">
     <?php
       include 'rodape.php';
     ?>
