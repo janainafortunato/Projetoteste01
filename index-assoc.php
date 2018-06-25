@@ -3,63 +3,18 @@ session_start();
 include_once 'cabecalho.php';
 include 'bd/conexao.php';
 ?>
-<style>
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-<!-- <link href="menu_lateral.css"> -->
 <div class="container">
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-</div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
   <div class="row">
     </div>
+      <!-- <div class="col-md-3">
+        <div class="card">
+            <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+              <h1>John Doe</h1>
+              <p class="title">CEO & Founder, Example</p>
+              <p>Harvard University</p>
+            </div>
+  <div style="margin: 24px 0;"> -->
          <div class="col-md-12">
         <h4><i class="fas fa-th-list"></i> Minhas Notícias</h4>
         <div class="table-responsive">
@@ -75,7 +30,8 @@ include 'bd/conexao.php';
               
                 <?php
                 $user = $_SESSION['user'];
-                $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_ID = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user'";
+
+                $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_FK = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user'";
                 $stmt = $conn->prepare($query);
                 $res = $stmt->execute();
                 $rows = $stmt->rowCount();
@@ -118,74 +74,6 @@ include 'bd/conexao.php';
       </div>
     </div>
   </div>
-  
-  <!-- formulário de edição -->
-  <?php
-
-    // pega o ID da URL
-    // $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
-    // //Valida a variavel da URL
-    // if (empty($id)){
-    //   echo "ID para alteração não definido";
-    // exit;
-    // }
-
-    // $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO FROM TB_NOTICIAS WHERE ID_NOT='$id'";
-    // $result = $conn->prepare($sql);
-    // $result->bindParam();
-
-  ?>
-
-
-<!--   <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title custom_align" id="Heading">Edite sua publicação</h4>
-          </div>
-          <div class="modal-body">
-          <form action="" method="post">
-          <div class="form-group">
-            <label>Classifique a nóticia</label>
-            <select class="selectpicker" name="categoria">
-              <option>Cursos</option>
-              <option>Reuniões</option>
-              <option>Esporte</option>
-              <option>Projetos</option>
-              <option>Ações Sociais</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Título</label>
-            <input class="form-control " type="text">
-          </div>
-          
-          <div class="form-group">
-            <label>Subtítulo</label>
-            <input class="form-control " type="text">
-          </div>
-          
-          <div class="form-group">
-            <label>Escolha outro arquivo</label>
-            <input type="file" name="file" />
-          </div>
-          
-          <div class="form-group">
-            <label>Texto da notícia</label>
-            <textarea rows="2" class="form-control"></textarea>
-          </div>
-        </div>
-        
-        <div class="modal-footer ">
-          <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Editar</button>
-        </div>
-      </form>
-      </div>
-    </div>
-  </div>
-<!-- fim do formulário de edição -->
 
 <!-- modal excluir -->
 
@@ -241,13 +129,4 @@ include 'rodape.php';
 ?>
 
 </body>
-<script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-  </script>
 </html>

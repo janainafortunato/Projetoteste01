@@ -23,14 +23,19 @@ include 'cabecalho.php';
     if(!is_array($resultado)){
     echo "Nunhum dado encontrado";
     exit;
-}
+    }
+
+    $arquivo = $resultado['ARQUIVO'];
+    $entry = base64_encode($arquivo);
+
 ?>
  
     <div class="container">
       
       
       
-      <form action="editar-noticias.php" method="POST">
+      <form action="editar-noticias.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?=$id?>">
 
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -40,16 +45,17 @@ include 'cabecalho.php';
 
         <div class="form-row">
           <div class="form-group col-md-12">
+            <label>Selecione outro arquivo</label>
             <input type="file"  class="form-control-file" name="file" id="imgInp">
             <br>
-            <img id='img-upload'/>
+            <img id='img-upload' src="data:image/jpeg;base64,<?= $entry ?>"/>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
             <label>Digite o Título da nóticia</label>
-            <input type="text" class="form-control" name="titulo" value="<?php echo $resultado['TITULO']; ?>">
+            <input type="text" class="form-control" name="titulo" required value="<?php echo $resultado['TITULO']; ?>">
           </div>
         </div>
 
@@ -63,14 +69,14 @@ include 'cabecalho.php';
         <div class="form-row">
           <div class="form-group col-md-12">
             <label>Digite a Nóticia</label>
-            <textarea rows="10" cols="10" name="texto" class="form-control"></textarea>
+            <textarea rows="10" cols="10" name="texto" class="form-control" required=""><?php echo $resultado['TEXTO']; ?></textarea>
           </div>
         </div> 
 
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="sel2">Classifique a nóticia</label>
-            <select multiple class="form-control" id="sel2" name="categoria">
+            <select multiple class="form-control" id="sel2" name="categoria" required="">
               <option>Cursos</option>
               <option>Reuniões</option>
               <option>Esporte</option>
@@ -82,7 +88,7 @@ include 'cabecalho.php';
       
         <div class="form-row">
           <div class="form-group col-md-12">
-            <button class="btn">Editar</button>
+            <button id="btn" class="btn">Editar</button>
           </div>
         </div> 
       </form>

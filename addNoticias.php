@@ -9,8 +9,10 @@ $email = $_SESSION['user'];
 $categoria=addslashes($_POST['categoria']);
 $titulo=addslashes($_POST['titulo']);
 $subtitulo=addslashes($_POST['subtitulo']);
-$file= addslashes($_FILES['file']['name']);
+$file_path= addslashes($_FILES['file']['tmp_name']);
 $texto=addslashes($_POST['texto']);
+
+$file = file_get_contents($file_path);
 
 
  $stmt = $conn->prepare("SELECT ID_ASSOC FROM TB_ASSOCIACOES WHERE EMAIL='$email'");
@@ -19,13 +21,13 @@ $texto=addslashes($_POST['texto']);
 
 $id_assoc = $result['ID_ASSOC'];
 
-$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, NOT_ASSOC_ID) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
+$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, NOT_ASSOC_FK) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
 $stmt = $conn->prepare( $sql );
 
 $stmt->bindParam( ':categoria', $categoria);
 $stmt->bindParam( ':titulo', $titulo);
 $stmt->bindParam( ':subtitulo', $subtitulo);
-// $stmt->bindParam( ':file', file_get_contents($_FILES['file']['tmp_name']));
+$stmt->bindParam( ':file', $file);
 $stmt->bindParam( ':texto', $texto);
 $stmt->bindParam( ':assoc_id', $id_assoc);
 

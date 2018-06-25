@@ -4,7 +4,7 @@
    
     <div class="container">
       
-      <form action="addNoticias.php" method="POST" enctype="multpart/form-data">
+      <form action="addNoticias.php" method="POST" enctype="multipart/form-data">
         
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -57,7 +57,7 @@
         
         <div class="form-row">
           <div class="form-group col-md-12">
-            <button class="btn">Salvar</button>
+            <button id="btn" class="btn">Salvar</button>
           </div>
         </div> 
       </form>

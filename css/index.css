@@ -158,8 +158,12 @@ footer a:hover{
   font-size: 20px;
 }
 
-.btn{
-  background: #2d4958;
-  color: white;
-
+#btn{
+   background: #2d4958;
+   color: white;
+ 
 }
+
+#img-upload{
+ width: 100%;
+ }

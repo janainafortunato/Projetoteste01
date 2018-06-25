@@ -32,7 +32,7 @@ include "cabecalho.php";
           <div class="form-row">
             <div class="form-group col-md-12">
               <a href="form-cadastro-assoc.php">Cadastre-se</a>
-               <button type="submit" class="btn btn-primary">Enviar</button>
+               <button type="submit" class="btn btn-primary" id="btn">Enviar</button>
             </div>
           </div>
       </form>
