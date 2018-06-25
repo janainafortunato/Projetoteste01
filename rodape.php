@@ -1,4 +1,4 @@
-<footer class="mainfooter" role="contentinfo">
+<footer class="mainfooter footer" role="contentinfo">
   <div class="footer-top p-y-2">
     <div class="container-fluid">
       <div class="row">
@@ -15,9 +15,9 @@
         <!--Column1-->
         <div class="footer-pad">
           <h4>SIGA-NOS</h4>
-          <i class="fab fa-facebook-square fa-2x"></i>
-          <i class="fab fa-twitter-square fa-2x"></i>
-          <i class="fab fa-instagram fa-2x"></i>
+          <a href="#" id="facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="#" id="twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+          <a href="#" id="instagram"><i class="fab fa-instagram fa-2x"></i></a>
           <!-- <a href="https://github.com/suellennn/Dia-a-dia-Associa-es" target="-blank"><i class="fab fa-github-alt fa-2x"></i></a> -->
         </div>
       </div>
@@ -54,9 +54,6 @@
           </ul>
         </div>
       </div>
-    </div>
-  </div3
-  </div>
   <div class="footer-bottom">
     <div class="container-fluid">
       <div class="row">
@@ -68,4 +65,5 @@
       </div>
     </div>
   </div>
+</div>
 </footer>
