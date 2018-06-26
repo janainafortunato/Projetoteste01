@@ -24,7 +24,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <label>Digite o Título da nóticia</label>
-            <input type="text" class="form-control" name="titulo">
+            <input type="text" class="form-control" name="titulo" required>
           </div>
         </div>
       
@@ -38,14 +38,14 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <label>Digite a Nóticia</label>
-            <textarea rows="10" cols="10" name="texto" class="form-control"></textarea>
+            <textarea rows="10" cols="10" name="texto" class="form-control" required></textarea>
           </div>
         </div> 
 
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="sel2">Classifique a nóticia</label>
-            <select multiple class="form-control" id="sel2" name="categoria">
+            <select multiple class="form-control" id="sel2" name="categoria" required>
               <option>Cursos</option>
               <option>Reuniões</option>
               <option>Esporte</option>

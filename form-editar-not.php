@@ -34,7 +34,7 @@ include 'cabecalho.php';
       
       
       
-      <form action="editar-noticias.php" method="POST" enctype="multipart/form-data">
+      <form action="editar-noticias.php?id=<?=$id?>" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?=$id?>">
 
         <div class="form-row">
@@ -100,6 +100,24 @@ include 'cabecalho.php';
 <?php
 include 'rodape.php';
 ?>
+<script type="text/javascript" >
+    $(document).ready( function() {
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#img-upload').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#imgInp").change(function(){
+        readURL(this);
+      });   
+    });
+
+  </script>
+
 </body>
 </html>
 
