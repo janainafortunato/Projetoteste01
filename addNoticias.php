@@ -22,6 +22,7 @@ $file = file_get_contents($file_path);
 $id_assoc = $result['ID_ASSOC'];
 
 $sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, NOT_ASSOC_FK) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
+
 $stmt = $conn->prepare( $sql );
 
 $stmt->bindParam( ':categoria', $categoria);

@@ -6,19 +6,22 @@
           <div class="footer-title text-xs-center">
             <h4 class="p-b-1">Dia-a-dia Associações</h4>
           </div>
-        </div><!--col-md-2-->
+        </div>
       </div>
     </div>
   </div>
  
   <div class="col-md-3 col-sm-3">
-        <!--Column1-->
         <div class="footer-pad">
           <h4>SIGA-NOS</h4>
+          <ul></ul>
           <a href="#" id="facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
           <a href="#" id="twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
           <a href="#" id="instagram"><i class="fab fa-instagram fa-2x"></i></a>
-          <!-- <a href="https://github.com/suellennn/Dia-a-dia-Associa-es" target="-blank"><i class="fab fa-github-alt fa-2x"></i></a> -->
+          <a href="#" id="twitter"><i class="fab fa-youtube-square fa-2x"></i></a>
+          <a href="#" id="twitter"><i class="fab fa-google-plus-square fa-2x"></i></a>
+          <a href="#" id="twitter"><i class="fab fa-dribbble-square fa-2x"></i></a>
+          </ul>
         </div>
       </div>
 
@@ -27,9 +30,9 @@
         <div class="footer-pad">
           <h4></h4>
           <ul class="list-unstyled">
-            <li><a href="index.php">Últimas Notícias</a></li>
-            <li><a href="projeto.php">Projetos</a></li>
-            <li><a href="acoes-sociais.php">Ações Sociais</a></li>
+            <li><a href="index.php"><i class="fa fa-angle-double-right"></i> Últimas Notícias</a></li>
+            <li><a href="projeto.php"><i class="fa fa-angle-double-right"></i> Projetos</a></li>
+            <li><a href="acoes-sociais.php"><i class="fa fa-angle-double-right"></i> Ações Sociais</a></li>
           </ul>
         </div>
       </div>
@@ -38,9 +41,9 @@
         <div class="footer-pad">
           <h4></h4>
           <ul class="list-unstyled">
-            <li><a href="cursos.php">Curso</a></li>
-            <li><a href="politica.php">Política</a></li>
-            <li><a href="esporte.php">Esporte</a></li>
+            <li><a href="cursos.php"><i class="fa fa-angle-double-right"></i> Curso</a></li>
+            <li><a href="politica.php"><i class="fa fa-angle-double-right"></i> Política</a></li>
+            <li><a href="esporte.php"><i class="fa fa-angle-double-right"></i> Esporte</a></li>
           </ul>
         </div>
       </div>
@@ -49,8 +52,8 @@
         <div class="footer-pad">
           <h4></h4>
           <ul class="list-unstyled">
-            <li><a href="sobre.php">Sobre</a></li>
-            <li><a href="desenvolvedores.php">Desenvolvedores</a></li>
+            <li><a href="sobre.php"><i class="fa fa-angle-double-right"></i> Sobre</a></li>
+            <li><a href="desenvolvedores.php"><i class="fa fa-angle-double-right"></i> Desenvolvedores</a></li>
           </ul>
         </div>
       </div>
@@ -58,10 +61,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
-          <!--Footer Bottom-->
-         
-          <p class="text-xs-center">&copy; Copyright 2018</p>
-
+        <hr>
+        <div class="row text-center">Copyright © Dia-a-dia Associações 2018</div>
       </div>
     </div>
   </div>
