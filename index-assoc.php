@@ -61,7 +61,7 @@ include 'bd/conexao.php';
                   <td><?php echo $data; ?></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Editar"><a href="form-editar-not.php?id=<?=$id?>" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a></p></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><a href="deletar-not.php?id=<?=$id?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a></p></td>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="index.php?id=<?=$id?>" class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
                  </tr>
               <?php
                }

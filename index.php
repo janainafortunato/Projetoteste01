@@ -1,7 +1,30 @@
-<?php include "cabecalho.php";
+<?php 
+include "cabecalho.php";
+include "bd/conexao.php";
 ?>
 
 <main> 
+
+  <?php 
+
+  // $user = $_SESSION['user'];
+
+  //   $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_FK = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user'";
+  //     $stmt = $conn->prepare($query);
+  //     $res = $stmt->execute();
+  //     $rows = $stmt->rowCount();
+
+  //     if ($rows <=0) {
+  //         echo "NENHUMA NOTÍCIA PUBLICADA :(";
+  //       } else{
+          
+  ?>
+    <?php 
+
+    // $campos = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+
+    ?> 
 
   <div class="container">
     <center><h2>ÚLTIMAS NOTÍCAIS</h2></center>
