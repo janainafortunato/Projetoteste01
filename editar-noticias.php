@@ -37,6 +37,7 @@ if($file == false){
 			exit;
 		}
 
+		$_SESSION['sucess-editado']=1;
 		header('location:index-assoc.php');
 }else{
 
@@ -67,7 +68,7 @@ if($file == false){
 			var_dump( $stmt->errorInfo() );
 			exit;
 		}
-
+		$_SESSION['sucess-editado']=1;
 		header('location:index-assoc.php');
 }
 

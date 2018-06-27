@@ -7,9 +7,7 @@ include "bd/conexao.php";
 
   <?php 
 
-  // $user = $_SESSION['user'];
-
-  //   $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_FK = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user'";
+  $query = "SELECT DISTINCT ARQUIVO,";
   //     $stmt = $conn->prepare($query);
   //     $res = $stmt->execute();
   //     $rows = $stmt->rowCount();
@@ -27,6 +25,7 @@ include "bd/conexao.php";
     ?> 
 
   <div class="container">
+
     <center><h2>ÚLTIMAS NOTÍCAIS</h2></center>
     
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 50%; margin: auto;">

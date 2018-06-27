@@ -5,6 +5,11 @@ include 'bd/conexao.php';
 ?>
 
 <div class="container">
+  <?php if(isset($_SESSION['sucess-editado'])):?>
+    <center><span class="sucess-editado"> Notícia Editada com Sucesso!!! </span></center> 
+    <?php unset($_SESSION['sucess-editado']); ?>
+  <?php  endif;?>
+
   <div class="row">
     </div>
       <div class="col-md-12">
