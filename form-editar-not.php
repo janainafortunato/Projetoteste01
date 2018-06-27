@@ -88,6 +88,7 @@ include 'cabecalho.php';
       
         <div class="form-row">
           <div class="form-group col-md-12">
+            <a href="index-assoc.php" id="btn" class="btn"><i class="fas fa-caret-left"></i> Voltar</a>
             <button id="btn" class="btn">Editar</button>
           </div>
         </div> 
