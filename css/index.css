@@ -174,3 +174,7 @@ footer a:hover{
 .sucess-editado{
   color: green;
 }
+
+.not-sucess{
+  color: red;
+}

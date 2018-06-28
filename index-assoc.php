@@ -6,8 +6,13 @@ include 'bd/conexao.php';
 
 <div class="container">
   <?php if(isset($_SESSION['sucess-editado'])):?>
-    <center><span class="sucess-editado"> Notícia Editada com Sucesso!!! </span></center> 
+    <center><span class="sucess-editado"> Notícia editada com sucesso!!! </span></center> 
     <?php unset($_SESSION['sucess-editado']); ?>
+  <?php  endif;?>
+
+  <?php if (isset($_SESSION['sucess-excluido'])):?>
+    <center><span class="sucess-editado"> Notícia excluída com sucesso!!! </span></center> 
+  <?php unset($_SESSION['sucess-excluido']); ?>
   <?php  endif;?>
 
   <div class="row">
@@ -116,8 +121,6 @@ include 'bd/conexao.php';
 
 <!-- fim publicar -->
 
-
-<div style="margin-top:250px;">
 
 <?php
 include 'rodape.php';

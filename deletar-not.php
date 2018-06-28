@@ -23,7 +23,7 @@ if ( ! $result ){
 			var_dump( $stmt->errorInfo() );
 			exit;
 		}
-
+		$_SESSION['sucess-excluido']=1;
 		header('location:index-assoc.php');
 
 

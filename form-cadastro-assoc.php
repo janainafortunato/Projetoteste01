@@ -1,9 +1,18 @@
 <?php 
+session_start();
 include "cabecalho.php";
 ?>
 <main>
 
   <div class="container">
+
+    <?php if(isset($_SESSION['not-sucess'])):?>
+    <script>
+      alert("CNPJ ou Email já cadastrado!");
+    </script>  
+    <!-- <center><span class="not-sucess"> CNPJ ou Email já cadastrado! </span></center>  -->
+    <?php unset($_SESSION['not-sucess']); ?>
+    <?php  endif;?>
    
     <form action="addAssociacoes.php" method="post">
       <div class="form-row">
