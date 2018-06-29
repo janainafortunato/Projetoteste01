@@ -16,18 +16,18 @@ $nomeRes = addslashes($_POST['nomeRes']);
 $user = addslashes($_POST['user']);
 $pw = md5(addslashes($_POST['password']));
 
-$sql = "SELECT EMAIL, CNPJ FROM TB_ASSOCIACOES";
-$stmt = $conn->prepare( $sql );
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
+// $sql = "SELECT EMAIL, CNPJ FROM TB_ASSOCIACOES";
+// $stmt = $conn->prepare( $sql );
+// $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$email_res = $result['EMAIL'];
-$cnpj_res = $result['CNPJ'];
+// $email_res = $result['EMAIL'];
+// $cnpj_res = $result['CNPJ'];
 
-if ($email_res == $email || $cnpj_res == $pw) {
+// if ($email_res == $user || $cnpj_res == $cnpj) {
 	
-	$_SESSION['not-sucess']=1;
-	header('location:form-cadastro-assoc.php');
-}else{
+// 	$_SESSION['not-sucess']=1;
+// 	header('location:form-cadastro-assoc.php');
+// }else{
 
 $sql = "INSERT INTO TB_ASSOCIACOES (NOME_FANTASIA, CNPJ, TELEFONE, CELULAR, FACEBOOK, RUA, BAIRRO, CIDADE, NOME_RESPONSAVEL, EMAIL, SENHA) VALUES(:nomeFan, :cnpj, :fone, :cel, :face, :rua, :bairro, :cidade, :nomeRes, :user, :pw)";
 
@@ -54,6 +54,6 @@ if ( ! $result ){
 $_SESSION['sucess-cadastrado']=1;
 header('location:form-login.php');
 
-}
+// }
 
 ?>

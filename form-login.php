@@ -7,6 +7,11 @@ include "cabecalho.php";
   <main>
 
 	  <div class="container">
+
+      <?php if(isset($_SESSION['sucess-cadastrado'])):?>
+      <center><span class="sucess-editado"> Associação cadastrada com sucesso!!! </span></center> 
+      <?php unset($_SESSION['sucess-cadastrado']); ?>
+      <?php  endif;?>
   
         <form action="autLogin.php" method="post">
           <div class="form-row">

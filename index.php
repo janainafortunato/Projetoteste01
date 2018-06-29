@@ -7,7 +7,7 @@ include "bd/conexao.php";
 
   <?php 
 
-  $query = "SELECT DISTINCT ARQUIVO,";
+  // $query = "SELECT DISTINCT ARQUIVO,";
   //     $stmt = $conn->prepare($query);
   //     $res = $stmt->execute();
   //     $rows = $stmt->rowCount();

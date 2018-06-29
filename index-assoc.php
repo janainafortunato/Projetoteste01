@@ -5,6 +5,21 @@ include 'bd/conexao.php';
 ?>
 
 <div class="container">
+  
+  <?php
+  $user = $_SESSION['user'];
+
+  $sql = "SELECT NOME_FANTASIA FROM TB_ASSOCIACOES WHERE EMAIL = '$user'";
+  $stmt = $conn->prepare($sql);
+  $res = $stmt->execute();
+
+  $campos = $stmt->fetch(PDO::FETCH_ASSOC);
+
+  $nome = $campos['NOME_FANTASIA'];
+
+  ?>
+  <center><h2><?php echo $nome; ?></h2></center>
+
   <?php if(isset($_SESSION['sucess-editado'])):?>
     <center><span class="sucess-editado"> Notícia editada com sucesso!!! </span></center> 
     <?php unset($_SESSION['sucess-editado']); ?>
@@ -77,7 +92,7 @@ include 'bd/conexao.php';
 
 <!-- modal excluir -->
 
-  <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete" aria-hidden="true">
+  <!-- <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -95,11 +110,11 @@ include 'bd/conexao.php';
           </div>
         </div> 
       </div> 
-    </div>
+    </div> -->
 <!-- fim excluir -->
 
 <!-- modal publicar -->
-    <div class="modal fade" id="publicar" tabindex="-1" role="dialog" aria-labelledby="publicar" aria-hidden="true">
+   <!--  <div class="modal fade" id="publicar" tabindex="-1" role="dialog" aria-labelledby="publicar" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -117,7 +132,7 @@ include 'bd/conexao.php';
           </div>
         </div> 
       </div> 
-    </div>
+    </div> -->
 
 <!-- fim publicar -->
 
