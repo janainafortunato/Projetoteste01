@@ -51,7 +51,7 @@ include 'bd/conexao.php';
                 $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_FK = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user'";
                 $stmt = $conn->prepare($query);
                 $res = $stmt->execute();
-                $rows = $stmt->rowCount();
+                $rows = $stmt->rowCount();  
   
                   if ($rows <=0) {
                       echo "<tbody>
@@ -67,6 +67,7 @@ include 'bd/conexao.php';
                       $id = $campos['ID_NOT'];
                       $titulo = $campos['TITULO'];
                       $data = $campos['DATA'];
+                      $publicado = $campos['PUBLICADO'];
               ?>
 
               <tbody>
@@ -76,7 +77,11 @@ include 'bd/conexao.php';
                   <td><?php echo $data; ?></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Editar"><a href="form-editar-not.php?id=<?=$id?>" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a></p></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><a href="deletar-not.php?id=<?=$id?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a></p></td>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="index.php?id=<?=$id?>" class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <?php if ($publicado = 1): ?>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="despublicar.php?id=<?=$id?>" class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <?php else: ?>
+                    <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="publicar.php?id=<?=$id?>" class="btn btn-warning btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <?php endif ?>
                  </tr>
               <?php
                }

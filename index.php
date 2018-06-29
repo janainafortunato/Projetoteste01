@@ -5,25 +5,6 @@ include "bd/conexao.php";
 
 <main> 
 
-  <?php 
-
-  // $query = "SELECT DISTINCT ARQUIVO,";
-  //     $stmt = $conn->prepare($query);
-  //     $res = $stmt->execute();
-  //     $rows = $stmt->rowCount();
-
-  //     if ($rows <=0) {
-  //         echo "NENHUMA NOTÍCIA PUBLICADA :(";
-  //       } else{
-          
-  ?>
-    <?php 
-
-    // $campos = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-
-    ?> 
-
   <div class="container">
 
     <center><h2>ÚLTIMAS NOTÍCAIS</h2></center>
@@ -103,7 +84,7 @@ include "bd/conexao.php";
     $arquivo = $campos['ARQUIVO'];
     $texto = $campos['TEXTO'];
 
-    $rest = substr($texto, 0, 300);  // retorna "abcde"
+    $rest = substr($texto, 0, 300);
 
     $entry = base64_encode($arquivo);
 
