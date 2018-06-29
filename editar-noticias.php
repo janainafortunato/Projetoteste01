@@ -90,9 +90,6 @@ if($file == false){
 		$result2 = $stmt->execute();
 
 
-
-
-
 		if ( ! $result && ! $result2 && ! $result1){
 			var_dump( $stmt->errorInfo() );
 			exit;

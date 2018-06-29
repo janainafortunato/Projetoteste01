@@ -57,12 +57,12 @@
         
         <div class="form-row">
           <div class="form-group col-md-12">
-        <div class="checkbox">
-          <p style="color:red;">Selecione publicar se deseja que sua notícia seja publicada agora.</p>
-          <label><input type="checkbox" name="publicado" value="0">Publicar</label>
+            <div class="checkbox">
+              <p style="color:red;">Selecione publicar se deseja que sua notícia seja publicada agora.</p>
+              <label><input type="checkbox" name="publicado" value="0">Publicar</label>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
         
         <div class="form-row">
           <div class="form-group col-md-12">

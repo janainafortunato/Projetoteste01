@@ -83,67 +83,47 @@ include "bd/conexao.php";
   </div>
 <br>
 <br>
-  <div class="container">    
-  <div class="row">
+  <div class="container">
+  <?php
+  $sql = "SELECT ARQUIVO, TITULO, TEXTO FROM TB_NOTICIAS WHERE PUBLICADO = '1' ORDER BY DATA DESC LIMIT 3";
+
+  $stmt = $conn->prepare($sql);
+  $res = $stmt->execute();
+  $rows = $stmt->rowCount();
+
+  if ($rows <=0) {
+    echo "<h1>NÃO EXISTE NOTICIAS PLUBLICADAS :(</h1>";
+    } else{         
+
+  ?>
+  <?php 
+
+  while ($campos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $titulo = $campos['TITULO'];
+    $arquivo = $campos['ARQUIVO'];
+    $texto = $campos['TEXTO'];
+
+    $rest = substr($texto, 0, 300);  // retorna "abcde"
+
+    $entry = base64_encode($arquivo);
+
+   ?>
+
+  <div>
     <div class="col-sm-4">
-      <div><h4 class="titulo-h4">A.B.B inagura o seu espaço cultural</h4></div>
+      <div><h4 class="titulo-h4"><?php echo $titulo ?></h4></div>
           <div>
-          <img src="img/figura0.jpg" class="img-responsive" style="width:100%;height:200px;" alt="Image">
-          <p class="text-index">A presidenta Duci Fontes e sua diretoria executiva, inaugurou, o Espaço Cultural da ABB, onde serão realizados cursos e oficinas.<a href="not-3.php">Saiba mais...</a></p>
+          <img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;height:200px;" alt="Image">
+          <p class="text-index"><?php echo $rest ?><a href="not-3.php">Saiba mais...</a></p>
       </div>
-        <div class="panel-footer">16/05/18 em Abreu lima</div>
-    </div>
-
-    <div class="col-sm-4">
-        <div><h4 class="titulo-h4">Associação dos pescadores promove cursos</h4></div> 
-        <div>
-          <img src="img/figura00.png" class="img-responsive" style="width:100%;height:200px;" alt="Image">
-          <p class="text-index"> A Associação de pescadores de Igarassu promove cursos atraves do programa govenamental do estado de Pernambuco chapéu de palha.<a href="not-5.php">Saiba mais...</a></p>
-        </div>
-        <div class="panel-footer">22/05/18 em Igarassu</div>
-    </div>
-    <div class="col-sm-4">
-        <div><h4 class="titulo-h4">Sela um colaborador</h4></div>
-        <div>
-          <img src="img/figura05.png" class="img-responsive" style="width:100%;height: 200px;" alt="Image">
-          <p class="text-index">O Pão da Vida desenvolve projetos em diferentes áreas e precisa de pessoas dispostas a colaborar.<a href="not-4.php"> Saiba mais...</a></p>
-        </div>
-        <div class="panel-footer">23/05/18 em Igarassu</div>
+        <!-- <div class="panel-footer">16/05/18 em Abreu lima</div> -->
     </div>
   </div>
-</div>
-<div class="container">
-  <hr>
-</div>
+  <?php
+    }
+}
+  ?>
 
-
-<div class="container">    
-  <div class="row">
-     <div class="col-sm-4">
-            <div>BLACK FRIDAY DEAL</div>
-            <div>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
-            </div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-    </div>
-     <div class="col-sm-4">
-            <div>BLACK FRIDAY DEAL</div>
-            <div>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
-            </div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-    </div>
-     <div class="col-sm-4">
-            <div>BLACK FRIDAY DEAL</div>
-            <div>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido <a href="">Saiba mais...</a></p>
-            </div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-    </div>
-  </div>
 </div>
 
 </main>
