@@ -13,6 +13,12 @@ $file_path= addslashes($_FILES['file']['tmp_name']);
 $texto=addslashes($_POST['texto']);
 $id = isset($_POST['id']) ? $_POST['id'] : null;
 
+if (isset($_POST['publicado'])) {
+	$publicado = 1;
+} else {
+	$publicado = 0;
+}
+
 $file = file_get_contents($file_path);
 
 if($file == false){
@@ -28,20 +34,31 @@ if($file == false){
 	$stmt->bindParam(3, $subtitulo);
 	$stmt->bindParam(4, $texto);
 	$stmt->bindParam(5, $id);
+	
 
 	$result = $stmt->execute();
 
+	$query = ("UPDATE TB_NOTICIAS SET  PUBLICADO = ? WHERE ID_NOT = ?");
 
-		if ( ! $result ){
+	$stmt = $conn->prepare($query);
+
+	$stmt->bindParam(1, $publicado);
+	$stmt->bindParam(2, $id);
+
+	$result2 = $stmt->execute();
+
+
+		if ( ! $result && ! $result2 ){
 			var_dump( $stmt->errorInfo() );
 			exit;
 		}
 
 		$_SESSION['sucess-editado']=1;
 		header('location:index-assoc.php');
+
 }else{
 
-	$sql = ("UPDATE TB_NOTICIAS SET CATEGORIA = ?, TITULO = ?, SUBTITULO = ?, TEXTO = ? WHERE ID_NOT = ?");
+	$sql = ("UPDATE TB_NOTICIAS SET CATEGORIA = ?, TITULO = ?, SUBTITULO = ?, TEXTO = ?, PUBLICADO = ?  WHERE ID_NOT = ?");
 
 	$stmt = $conn->prepare($sql);
 
@@ -50,8 +67,18 @@ if($file == false){
 	$stmt->bindParam(3, $subtitulo);
 	$stmt->bindParam(4, $texto);
 	$stmt->bindParam(5, $id);
+	$stmt->bindParam(6, $publicado);
 
 	$result = $stmt->execute();
+
+	$query1 = ("UPDATE TB_NOTICIAS SET  PUBLICADO = ? WHERE ID_NOT = ?");
+
+	$stmt = $conn->prepare($query1);
+
+	$stmt->bindParam(1, $publicado);
+	$stmt->bindParam(2, $id);
+
+	$result1 = $stmt->execute();
 
 	$query = ("UPDATE TB_NOTICIAS SET ARQUIVO  = ? WHERE ID_NOT = ?");
 
@@ -64,7 +91,9 @@ if($file == false){
 
 
 
-		if ( ! $result && ! $result2 ){
+
+
+		if ( ! $result && ! $result2 && ! $result1){
 			var_dump( $stmt->errorInfo() );
 			exit;
 		}

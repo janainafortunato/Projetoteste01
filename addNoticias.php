@@ -12,6 +12,13 @@ $subtitulo=addslashes($_POST['subtitulo']);
 $file_path= addslashes($_FILES['file']['tmp_name']);
 $texto=addslashes($_POST['texto']);
 
+if (isset($_POST['publicado'])) {
+	$publicado = 1;
+} else {
+	$publicado = 0;
+}
+
+
 $file = file_get_contents($file_path);
 
 
@@ -21,7 +28,7 @@ $file = file_get_contents($file_path);
 
 $id_assoc = $result['ID_ASSOC'];
 
-$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, NOT_ASSOC_FK) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id)";
+$sql ="INSERT INTO TB_NOTICIAS (CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, NOT_ASSOC_FK, PUBLICADO) VALUES(:categoria, :titulo, :subtitulo, :file, :texto, :assoc_id, :publicado)";
 
 $stmt = $conn->prepare( $sql );
 
@@ -31,6 +38,7 @@ $stmt->bindParam( ':subtitulo', $subtitulo);
 $stmt->bindParam( ':file', $file);
 $stmt->bindParam( ':texto', $texto);
 $stmt->bindParam( ':assoc_id', $id_assoc);
+$stmt->bindParam( ':publicado', $publicado);
 
 $result = $stmt->execute();
 if ( ! $result ){
