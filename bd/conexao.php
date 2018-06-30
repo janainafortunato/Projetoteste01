@@ -2,7 +2,7 @@
 
 	$dbname = "camila";
 	$usuario="root";
-	$senha = "ifpe";
+	$senha = "311291cr";
 
 // $dbname = "id5464648_camila";
 // $usuario="id5464648_root";

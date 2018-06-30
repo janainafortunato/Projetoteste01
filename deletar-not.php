@@ -12,7 +12,7 @@ $id = isset($_GET['id'])? (int) $_GET['id'] : null;
     exit;
     }
 
-$sql = ("DELETE FROM TB_NOTICIAS WHERE ID_NOT = '$id'");
+$sql = ("DELETE FROM TB_NOTICIAS WHERE ID_NOT = '$id' AND PUBLICADO = '0'");
 
 $stmt = $conn->prepare($sql);
 
