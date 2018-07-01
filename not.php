@@ -48,7 +48,8 @@ include 'bd/conexao.php';
     </div>
 
     <div class="container">
-<p>COMENTÁRIOS</p>
+    <br><br>
+      <p>DEIXE AQUI SEU COMENTÁRIO</p>
   <?php
   if(isset($_GET['action']) && $_GET['action'] =='excluir'){
    $idExcluir=$_GET['id'];
@@ -77,7 +78,7 @@ $result = $stmt->execute();
     exit;
     }
     ?>
-<form action="#" method="post">
+<form action="" method="post">
   <div class="form-row">
     <div class="form-group col-sm-7">
       <label>Nome</label>
@@ -102,7 +103,7 @@ $result = $stmt->execute();
 </div>
 <?php if (isset($_POST['acao'])) {
   $nomeComent = addslashes($_POST['nomeComent']);
-$coment = addslashes($_POST['coment']);
+  $coment = addslashes($_POST['coment']);
 // $acao = addslashes($_POST['acao']);
 
 $sql = "INSERT INTO TB_COMENTARIO (COM_NOME,COM_COMENTARIO,FK_ID_NOT) VALUES(:nomeComent, :coment, :id)";
@@ -118,6 +119,8 @@ if ( ! $result ){
   exit;
 }
 } ?>
+<div class="container">
+<p>COMENTÁRIOS</p>
   <?php
 
     $query = "SELECT * FROM TB_COMENTARIO, TB_NOTICIAS WHERE TB_NOTICIAS.ID_NOT = TB_COMENTARIO.FK_ID_NOT AND ID_NOT='$id' ORDER BY COM_ID DESC LIMIT 6";
@@ -125,22 +128,23 @@ if ( ! $result ){
     $res = $stmt->execute();
     $rows = $stmt->rowCount();
     if($rows <= 0){
-      echo"Seja o primeiro a comentar!";
+      echo"<div>Seja o primeiro a comentar!</div>";
 
     } else {
       ?>
-    <div class="container">
+    <!-- <div class="container"> -->
       <?php
       while($campos = $stmt->fetch(PDO::FETCH_ASSOC)){
            $id=$campos['COM_ID'];
            $name=$campos['COM_NOME'];
            $_comentario=$campos['COM_COMENTARIO'];
       ?>
-           <div id="exibe">
-            <p>nome:<?php echo $name; ?></p> 
-            <p>Comentario:<?php echo $_comentario; ?></p>
-            <!-- <a href="?action=excluir&id=<?php echo $id; ?> " class= "excluir">Excluir</a> -->
-           </div>
+           <div class="form-row" id="div-comentario">
+              <div class="form-group col-sm-7">
+                <p>NOME:<?php echo $name; ?></p>
+                <p>COMENTÁRIO:<?php echo $_comentario; ?></p>
+              </div>
+            </div>
            <?php
         }
        }
