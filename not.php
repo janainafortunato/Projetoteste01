@@ -118,9 +118,9 @@ if ( ! $result ){
   exit;
 }
 } ?>
-  <?php  
+  <?php
 
-    $query = "SELECT * FROM TB_COMENTARIO, TB_NOTICIAS WHERE TB_NOTICIAS.ID_NOT = TB_COMENTARIO.FK_ID_NOT ORDER BY COM_ID DESC LIMIT 6";
+    $query = "SELECT * FROM TB_COMENTARIO, TB_NOTICIAS WHERE TB_NOTICIAS.ID_NOT = TB_COMENTARIO.FK_ID_NOT AND ID_NOT='$id' ORDER BY COM_ID DESC LIMIT 6";
     $stmt = $conn->prepare($query);
     $res = $stmt->execute();
     $rows = $stmt->rowCount();
@@ -139,7 +139,7 @@ if ( ! $result ){
            <div id="exibe">
             <p>nome:<?php echo $name; ?></p> 
             <p>Comentario:<?php echo $_comentario; ?></p>
-            <a href="?action=excluir&id=<?php echo $id; ?> " class= "excluir">Excluir</a>
+            <!-- <a href="?action=excluir&id=<?php echo $id; ?> " class= "excluir">Excluir</a> -->
            </div>
            <?php
         }
@@ -173,7 +173,7 @@ if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
   unset($_POST['acao']);
 }
 
-header('location:index.php');
+// header('location:index.php');
  ?>
     <?php 
     // include "comentario.php";

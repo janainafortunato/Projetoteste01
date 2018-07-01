@@ -42,7 +42,7 @@
           <h4></h4>
           <ul class="list-unstyled">
             <li><a href="cursos.php"><i class="fa fa-angle-double-right"></i> Curso</a></li>
-            <li><a href="politica.php"><i class="fa fa-angle-double-right"></i> Política</a></li>
+            <li><a href="reuniao.php"><i class="fa fa-angle-double-right"></i> Reunião</a></li>
             <li><a href="esporte.php"><i class="fa fa-angle-double-right"></i> Esporte</a></li>
           </ul>
         </div>
