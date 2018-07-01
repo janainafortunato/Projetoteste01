@@ -67,7 +67,7 @@ include "bd/conexao.php";
 <br>
   <div class="container">
   <?php
-  $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT FROM TB_NOTICIAS WHERE PUBLICADO = '1' ORDER BY DATA DESC LIMIT 9";
+  $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT, SUBTITULO FROM TB_NOTICIAS WHERE PUBLICADO = '1' ORDER BY DATA DESC LIMIT 9";
 
   $stmt = $conn->prepare($sql);
   $res = $stmt->execute();
@@ -85,6 +85,7 @@ include "bd/conexao.php";
     $titulo = $campos['TITULO'];
     $arquivo = $campos['ARQUIVO'];
     $texto = $campos['TEXTO'];
+    $subtitulo = $campos['SUBTITULO'];
 
     $rest = substr($texto, 0, 300);
 
@@ -94,7 +95,10 @@ include "bd/conexao.php";
 
   <div>
     <div class="col-sm-4">
-      <div><h4 class="titulo-h4"><?php echo $titulo ?></h4></div>
+      <div>
+        <h4 class="titulo-h4"><?php echo $titulo ?></h4>
+        <p class="text-index"><?php echo $subtitulo ?></p>
+      </div>
           <div>
           <a href="not.php?id=<?=$id?>"><img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;height:200px;" alt="Image"></a>
           <p class="text-index"><?php echo $rest ?><a href="not.php?id=<?=$id?>">Saiba mais...</a></p>

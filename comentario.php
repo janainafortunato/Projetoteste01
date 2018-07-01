@@ -1,25 +1,20 @@
 <?php
 include_once "bd/conexao.php"
 ?>
-<!DOCTYPE HTML>
-<html xmlns="http;//www.w3.org/1999/html">
-<meta charset="utf-8">
-<title>   </title>
-<body>
 
   <?php
-	if(isset($_GET['action']) && $_GET['action'] =='excluir'){
-		$idExcluir=$_GET['id'];
-		$query = "DELETE FROM TB_COMENTARIO WHERE COM_ID='$idExcluir'";
-		$result = mysqli_query($conn, $query);
-		if ($result) {
-			echo"<script > alert (\"editado com sucesso!\");</script>";
-		}
-	}
+	// if(isset($_GET['action']) && $_GET['action'] =='excluir'){
+	// 	$idExcluir=$_GET['id'];
+	// 	$query = "DELETE FROM TB_COMENTARIO WHERE COM_ID='$idExcluir'";
+	// 	$result = mysqli_query($conn, $query);
+	// 	if ($result) {
+	// 		echo"<script > alert (\"editado com sucesso!\");</script>";
+	// 	}
+	// }
 	?>
 	
 	<div class="container">
-<form action="" method="post">
+<form action="add-comentario.php" method="post">
   <div class="form-row">
     <div class="form-group col-sm-7">
       <label>Nome</label>
@@ -45,7 +40,7 @@ include_once "bd/conexao.php"
 
 	<?php  
 
-    $query = "SELECT * FROM TB_COMENTARIO";
+    $query = "SELECT * FROM TB_COMENTARIO, TB_NOTICIAS WHERE TB_NOTICIAS.ID_NOT = TB_COMENTARIO.FK_ID_NOT";
     $stmt = $conn->prepare($query);
     $res = $stmt->execute();
     $rows = $stmt->rowCount();
@@ -76,7 +71,7 @@ include_once "bd/conexao.php"
 
 
 </html>
-<?PHP
+<?php
 if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
 	include_once 'bd/conexao.php';
 

@@ -11,8 +11,19 @@ $id = isset($_GET['id'])? (int) $_GET['id'] : null;
       echo "ID para alteração não definido";
     exit;
     }
+$query = "SELECT PUBLICADO FROM TB_NOTICIAS WHERE ID_NOT = '$id'";
+  $stmt = $conn->prepare($query);
+  $res = $stmt->execute();
+  $campos = $stmt->fetch(PDO::FETCH_ASSOC);
+  $pubicado = $campos['PUBLICADO'];
 
-$sql = ("DELETE FROM TB_NOTICIAS WHERE ID_NOT = '$id' AND PUBLICADO = '0'");
+if ($pubicado == 1) {
+	$_SESSION['msg-despublique']=1;
+	header('location:index-assoc.php');
+
+}else {
+	
+$sql = ("DELETE FROM TB_NOTICIAS WHERE ID_NOT = '$id'");
 
 $stmt = $conn->prepare($sql);
 
@@ -25,6 +36,9 @@ if ( ! $result ){
 		}
 		$_SESSION['sucess-excluido']=1;
 		header('location:index-assoc.php');
+}
+
+
 
 
 ?>

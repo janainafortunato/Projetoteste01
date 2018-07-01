@@ -30,6 +30,11 @@ include 'bd/conexao.php';
   <?php unset($_SESSION['sucess-excluido']); ?>
   <?php  endif;?>
 
+    <?php if (isset($_SESSION['msg-despublique'])):?>
+    <center><span class="msg-despublique"> Você precisa despublicar está notícia para exclui-lá!!!  </span></center> 
+  <?php unset($_SESSION['msg-despublique']); ?>
+  <?php  endif;?>
+
   <div class="row">
     </div>
       <div class="col-md-12">
@@ -39,8 +44,8 @@ include 'bd/conexao.php';
             <thead>
               <th>ID</th>
                 <th>Título</th>
-                <th>Data / Hora</th>
-                <th>Editar</th>
+                <th>Data/Hora</th>
+                <th>Ler/Editar</th>
                 <th>Deletar</th>
                 <th>Publicar</th>
               </thead>
@@ -68,20 +73,21 @@ include 'bd/conexao.php';
                       $titulo = $campos['TITULO'];
                       $data = $campos['DATA'];
                       $publicado = $campos['PUBLICADO'];
+
               ?>
 
               <tbody>
                 <tr>
                   <td><?php echo $id; ?></td>
                   <td><?php echo $titulo; ?></td>
-                  <td><?php echo $data; ?></td>
+                  <td><?php echo $publicado; ?></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Editar"><a href="form-editar-not.php?id=<?=$id?>" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a></p></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><a href="deletar-not.php?id=<?=$id?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a></p></td>
-                  <?php if ($publicado = 1): ?>
+                  <?php if ($publicado=1){?>
                   <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="despublicar.php?id=<?=$id?>" class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
-                  <?php else: ?>
-                    <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="publicar.php?id=<?=$id?>" class="btn btn-warning btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
-                  <?php endif ?>
+                  <?php }else{?>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="publicar.php?id=<?=$id?>" class="btn btn-warning btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <?php } ?>
                  </tr>
               <?php
                }

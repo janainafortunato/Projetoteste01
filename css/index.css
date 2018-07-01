@@ -136,7 +136,9 @@ footer a:hover{
   text-align: center;
   font-size: 17px;
 }
-
+.msg-despublique{
+  color: red;
+}
 .text-index{
   text-align: justify;
   font-size: 15px;
