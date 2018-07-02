@@ -101,10 +101,11 @@ $result = $stmt->execute();
   </div>
 </form>
 </div>
-<?php if (isset($_POST['acao'])) {
+<?php 
+if (isset($_POST['acao'])) {
   $nomeComent = addslashes($_POST['nomeComent']);
   $coment = addslashes($_POST['coment']);
-// $acao = addslashes($_POST['acao']);
+$acao = addslashes($_POST['acao']);
 
 $sql = "INSERT INTO TB_COMENTARIO (COM_NOME,COM_COMENTARIO,FK_ID_NOT) VALUES(:nomeComent, :coment, :id)";
 $stmt = $conn->prepare( $sql );
