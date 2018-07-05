@@ -114,7 +114,7 @@ include "bd/conexao.php";
 
    ?>
 
-  <!-- <div class="not"> -->
+  <div class="not">
     <div class="col-sm-4">
       <div>
         <h4 class="titulo-h4"><?php echo $titulo ?></h4>
@@ -126,7 +126,7 @@ include "bd/conexao.php";
       </div>
         <!-- <div class="panel-footer">16/05/18 em Abreu lima</div> -->
     </div>
-  <!-- </div> -->
+  </div>
   <?php
     }
 }

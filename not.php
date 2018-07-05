@@ -14,7 +14,7 @@ include 'bd/conexao.php';
     exit;
     }
 
-    $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, DATA FROM TB_NOTICIAS WHERE ID_NOT='$id'";
+    $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, DATA, DATA_ED FROM TB_NOTICIAS WHERE ID_NOT='$id'";
     $result = $conn->prepare($sql);
     $result->bindParam(':id', $id, PDO::PARAM_INT);
     $result->execute();
@@ -24,7 +24,9 @@ include 'bd/conexao.php';
     echo "Nunhum dado encontrado";
     exit;
     }
-
+    $date = date_create($resultado['DATA_ED']);
+    $data_publ= date_create($resultado['DATA']);
+    // YYYY-MM-DD   
     $arquivo = $resultado['ARQUIVO'];
     $entry = base64_encode($arquivo);
     ?>
@@ -35,6 +37,7 @@ include 'bd/conexao.php';
    		
       	<h1 class="titulo"><?php echo $resultado['TITULO']; ?></h1>
         <p class="text"><?php echo $resultado['SUBTITULO']; ?></p>
+        <small><?php echo date_format($data_publ, 'd/m/Y H:i:s'); ?> - Atualizado em: <?php echo date_format($date, 'd/m/Y H:i:s'); ?></small>
    	    <hr>
       </div>
     	
@@ -44,7 +47,7 @@ include 'bd/conexao.php';
 				<p class="text"><?php echo $resultado['TEXTO']; ?></p>
     	</div>
 			
-      <div class="panel-footer"><?php echo $resultado['DATA']; ?></div>
+      <!-- <div class="panel-footer"><?php echo $resultado['DATA']; ?></div> -->
     </div>
 
     <div class="container">

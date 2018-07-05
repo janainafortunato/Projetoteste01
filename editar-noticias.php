@@ -11,6 +11,7 @@ $titulo=addslashes($_POST['titulo']);
 $subtitulo=addslashes($_POST['subtitulo']);
 $file_path= addslashes($_FILES['file']['tmp_name']);
 $texto=addslashes($_POST['texto']);
+$data_ed=addslashes($_POST['data_ed']);
 $id = isset($_POST['id']) ? $_POST['id'] : null;
 
 if (isset($_POST['publicado'])) {
@@ -19,11 +20,13 @@ if (isset($_POST['publicado'])) {
 	$publicado = 0;
 }
 
+$date = new DateTime($data_ed);
+$dateFort = $date->format('Y,m,d H:i,s');
 $file = file_get_contents($file_path);
 
 if($file == false){
 
-	$sql = ("UPDATE TB_NOTICIAS SET CATEGORIA = ?, TITULO = ?, SUBTITULO = ?, TEXTO = ? WHERE ID_NOT = ?");
+	$sql = ("UPDATE TB_NOTICIAS SET CATEGORIA = ?, TITULO = ?, SUBTITULO = ?, TEXTO = ?, DATA_ED = ? WHERE ID_NOT = ?");
 
 
 
@@ -33,7 +36,8 @@ if($file == false){
 	$stmt->bindParam(2, $titulo);
 	$stmt->bindParam(3, $subtitulo);
 	$stmt->bindParam(4, $texto);
-	$stmt->bindParam(5, $id);
+	$stmt->bindParam(5, $dateFort);
+	$stmt->bindParam(6, $id);
 	
 
 	$result = $stmt->execute();
@@ -58,7 +62,7 @@ if($file == false){
 
 }else{
 
-	$sql = ("UPDATE TB_NOTICIAS SET CATEGORIA = ?, TITULO = ?, SUBTITULO = ?, TEXTO = ?, PUBLICADO = ?  WHERE ID_NOT = ?");
+	$sql = ("UPDATE TB_NOTICIAS SET CATEGORIA = ?, TITULO = ?, SUBTITULO = ?, TEXTO = ?, PUBLICADO = ?, DATA_ED = ?  WHERE ID_NOT = ?");
 
 	$stmt = $conn->prepare($sql);
 
@@ -67,7 +71,8 @@ if($file == false){
 	$stmt->bindParam(3, $subtitulo);
 	$stmt->bindParam(4, $texto);
 	$stmt->bindParam(5, $id);
-	$stmt->bindParam(6, $publicado);
+	$stmt->bindParam(6, $dateFort);
+	$stmt->bindParam(7, $publicado);
 
 	$result = $stmt->execute();
 
