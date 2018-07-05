@@ -4,6 +4,7 @@ include 'cabecalho.php';
 include "bd/conexao.php";
 ?>
 <div class="container">
+<center><h2>REUNIÃO</h2></center>
 <?php
   $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT, SUBTITULO FROM TB_NOTICIAS WHERE PUBLICADO = '1' AND CATEGORIA = 'Reuniões' ORDER BY DATA DESC LIMIT 9";
 

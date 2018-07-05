@@ -119,7 +119,11 @@ if ( ! $result ){
   var_dump( $stmt->errorInfo() );
   exit;
 }
-} ?>
+unset($_POST['acao']);
+header('location:index.php');
+} 
+
+?>
 <div class="container">
 <p>COMENTÁRIOS</p>
   <?php
@@ -157,27 +161,27 @@ if ( ! $result ){
 
 </html>
 <?php
-if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
-  include_once 'bd/conexao.php';
+// if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
+//   include_once 'bd/conexao.php';
 
-  $nomeComent = addslashes($_POST['nomeComent']);
-  $coment = addslashes($_POST['coment']);
+//   $nomeComent = addslashes($_POST['nomeComent']);
+//   $coment = addslashes($_POST['coment']);
 
-  $sql = "INSERT INTO TB_COMENTARIO (COM_NOME, COM_COMENTARIO) VALUES(:nomeComent, :coment)";
+//   $sql = "INSERT INTO TB_COMENTARIO (COM_NOME, COM_COMENTARIO) VALUES(:nomeComent, :coment)";
 
-  $stmt = $conn->prepare( $sql );
+//   $stmt = $conn->prepare( $sql );
 
-  $stmt->bindParam( ':nomeComent', $nomeComent );
-  $stmt->bindParam( ':coment', $coment );
+//   $stmt->bindParam( ':nomeComent', $nomeComent );
+//   $stmt->bindParam( ':coment', $coment );
 
-  $result = $stmt->execute();
-    if ( ! $result ){
-      var_dump( $stmt->errorInfo() );
-      exit;
-    }
-  unset($_POST['acao']);
-}
-
+//   $result = $stmt->execute();
+//     if ( ! $result ){
+//       var_dump( $stmt->errorInfo() );
+//       exit;
+//     }
+//   unset($_POST['acao']);
+//  // header('location:index.php');
+// }
 // header('location:index.php');
  ?>
     <?php 

@@ -20,6 +20,16 @@ include 'bd/conexao.php';
   ?>
   <center><h2><?php echo $nome; ?></h2></center>
 
+  <?php if(isset($_SESSION['sucess-despublicado'])):?>
+    <center><span class="sucess-editado"> Notícia despublicada com sucesso!!! </span></center> 
+    <?php unset($_SESSION['sucess-despublicado']); ?>
+  <?php  endif;?>
+
+  <?php if(isset($_SESSION['sucess-publicado'])):?>
+    <center><span class="sucess-editado"> Notícia publicada com sucesso!!! </span></center> 
+    <?php unset($_SESSION['sucess-publicado']); ?>
+  <?php  endif;?>
+
   <?php if(isset($_SESSION['sucess-editado'])):?>
     <center><span class="sucess-editado"> Notícia editada com sucesso!!! </span></center> 
     <?php unset($_SESSION['sucess-editado']); ?>
@@ -43,17 +53,18 @@ include 'bd/conexao.php';
           <table id="mytable" class="table table-bordred table-striped">
             <thead>
               <th>ID</th>
-                <th>Título</th>
-                <th>Data/Hora</th>
-                <th>Ler/Editar</th>
-                <th>Deletar</th>
-                <th>Publicar</th>
-              </thead>
+              <th>Título</th>
+              <th>Categoria</th>
+              <th>Data/Hora</th>
+              <th>Ler/Editar</th>
+              <th>Deletar</th>
+              <th>Publicar/Despublicar</th>
+            </thead>
               
                 <?php
                 $user = $_SESSION['user'];
 
-                $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_FK = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user'";
+                $query = "SELECT * FROM TB_ASSOCIACOES, TB_NOTICIAS WHERE TB_NOTICIAS.NOT_ASSOC_FK = TB_ASSOCIACOES.ID_ASSOC AND TB_ASSOCIACOES.EMAIL = '$user' ORDER BY DATA DESC";
                 $stmt = $conn->prepare($query);
                 $res = $stmt->execute();
                 $rows = $stmt->rowCount();  
@@ -71,6 +82,7 @@ include 'bd/conexao.php';
                 while ($campos = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       $id = $campos['ID_NOT'];
                       $titulo = $campos['TITULO'];
+                      $categoria = $campos['CATEGORIA'];
                       $data = $campos['DATA'];
                       $publicado = $campos['PUBLICADO'];
 
@@ -80,14 +92,16 @@ include 'bd/conexao.php';
                 <tr>
                   <td><?php echo $id; ?></td>
                   <td><?php echo $titulo; ?></td>
-                  <td><?php echo $publicado; ?></td>
+                  <td><?php echo $categoria; ?></td>
+                  <td><?php echo $data; ?></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Editar"><a href="form-editar-not.php?id=<?=$id?>" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a></p></td>
                   <td><p data-placement="top" data-toggle="tooltip" title="Deletar"><a href="deletar-not.php?id=<?=$id?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a></p></td>
-                  <?php if ($publicado=1){?>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="despublicar.php?id=<?=$id?>" class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <?php if ($publicado==1){?>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Despublicar"><a href="despublicar.php?id=<?=$id?>" class="btn btn-warning btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
                   <?php }else{?>
-                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="publicar.php?id=<?=$id?>" class="btn btn-warning btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
+                  <td><p data-placement="top" data-toggle="tooltip" title="Publicar"><a href="publicar.php?id=<?=$id?>" class="btn btn-success btn-xs"><i class="fas fa-check-square"></i></span></a></p></td>
                   <?php } ?>
+
                  </tr>
               <?php
                }
