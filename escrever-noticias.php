@@ -46,11 +46,11 @@
           <div class="form-group col-md-12">
             <label for="sel2">Classifique a nóticia</label>
             <select multiple class="form-control" id="sel2" name="categoria" required>
-              <option>Cursos</option>
-              <option>Reuniões</option>
-              <option>Esporte</option>
-              <option>Projetos</option>
-              <option>Ações Sociais</option>
+              <option value="Cursos">Cursos</option>
+              <option value="Reuniões">Reuniões</option>
+              <option value="Esporte">Esporte</option>
+              <option value="Projetos">Projetos</option>
+              <option value="Ações Sociais">Ações Sociais</option>
             </select>
           </div>
         </div>

@@ -29,7 +29,7 @@ if ($pubicado == 1) {
     exit;
     }
 
-$query = ("DELETE FROM TB_COMENTARIO WHERE FK_ID_NOT = '$id'");
+$query = ("DELETE FROM TB_COMENTARIO WHERE FK_ID_NOT = '$ID'");
 
 $stmt = $conn->prepare($query);
 $result2= $stmt->execute();

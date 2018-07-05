@@ -14,7 +14,7 @@ include 'cabecalho.php';
     exit;
     }
 
-    $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO FROM TB_NOTICIAS WHERE ID_NOT='$id'";
+    $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, PUBLICADO FROM TB_NOTICIAS WHERE ID_NOT='$id'";
     $result = $conn->prepare($sql);
     $result->bindParam(':id', $id, PDO::PARAM_INT);
     $result->execute();
@@ -24,12 +24,15 @@ include 'cabecalho.php';
     echo "Nunhum dado encontrado";
     exit;
     }
-
+    $publicado = $resultado['PUBLICADO'];
     $arquivo = $resultado['ARQUIVO'];
     $entry = base64_encode($arquivo);
 
 ?>
- 
+<?php 
+
+  if ($publicado == 1) {?>
+  
     <div class="container">
       
       
@@ -75,8 +78,10 @@ include 'cabecalho.php';
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="sel2">Classifique a nóticia</label>
-            <select multiple class="form-control" id="sel2" name="categoria" required="">
+            <label for="sel2">Categoria da nóticia</label>
+            <p><?php echo $resultado['CATEGORIA']; ?></p>
+            <label for="sel2">Editar categoria</label>
+            <select multiple class="form-control" id="sel2" name="categoria">
               <option>Cursos</option>
               <option>Reuniões</option>
               <option>Esporte</option>
@@ -86,14 +91,14 @@ include 'cabecalho.php';
           </div>
         </div> 
 
-        <div class="form-row">
+<!--         <div class="form-row">
           <div class="form-group col-md-12">
             <div class="checkbox">
               <p style="color:red;">Selecione publicar se deseja que sua notícia seja publicada agora.</p>
               <label><input type="checkbox" name="publicado" value="0">Publicar</label>
             </div>
           </div>
-        </div>
+        </div> -->
       
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -104,7 +109,7 @@ include 'cabecalho.php';
       </form>
     
     <div>
-  
+<?php } ?> 
   </main>
 <br><br>
 <?php
