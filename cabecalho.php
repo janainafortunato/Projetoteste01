@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dia-a-dia Associações</title>
+    <title>Comunidade Online</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
       
     </header>
       <div class="jumbotron text-center">
-        <h1 id="logo">Dia-a-dia Associações</h1>
+        <h1 id="logo">Comunidade Online</h1>
         <p id="tamanho">Veja as últimas notícias e acompanhe o que esta acontecendo na associação do seu bairro.</p> 
       </div>
 

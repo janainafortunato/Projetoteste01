@@ -13,8 +13,8 @@ include 'bd/conexao.php';
       echo "ID para alteração não definido";
     exit;
     }
-
-    $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, DATA, DATA_ED FROM TB_NOTICIAS WHERE ID_NOT='$id'";
+    $sql = "SELECT * FROM TB_NOTICIAS, TB_ASSOCIACOES WHERE ID_NOT='$id' AND ID_ASSOC = NOT_ASSOC_FK";
+    // $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, DATA, DATA_ED FROM TB_NOTICIAS WHERE ID_NOT='$id'";
     $result = $conn->prepare($sql);
     $result->bindParam(':id', $id, PDO::PARAM_INT);
     $result->execute();
@@ -24,13 +24,35 @@ include 'bd/conexao.php';
     echo "Nunhum dado encontrado";
     exit;
     }
-    $date = date_create($resultado['DATA_ED']);
+    $date = $resultado['DATA_ED'];
     $data_publ= date_create($resultado['DATA']);
     // YYYY-MM-DD   
     $arquivo = $resultado['ARQUIVO'];
     $entry = base64_encode($arquivo);
     ?>
+    <?php if ($date == null) {?>
+      <div class="container">
+    <div class="col-sm-12"> 
+      <div> 
+      
+        <h1 class="titulo"><?php echo $resultado['TITULO']; ?></h1>
+        <p class="text"><?php echo $resultado['SUBTITULO']; ?></p>
+        <small><?php echo date_format($data_publ, 'd/m/Y H:i:s'); ?></small>
+        <hr>
+      </div>
+      
+      <div>
+        <img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;" alt="Image">
+        <hr>
+        <p class="text"><?php echo $resultado['TEXTO']; ?></p>
+      </div>
+      
+      <div class="panel-footer"><?php echo $resultado['NOME_FANTASIA']; ?></div>
+    </div>
 
+
+    <?php }else{ $date = date_create($resultado['DATA_ED']); ?>
+  
   <div class="container">
     <div class="col-sm-12"> 
       <div> 
@@ -46,28 +68,29 @@ include 'bd/conexao.php';
         <hr>
 				<p class="text"><?php echo $resultado['TEXTO']; ?></p>
     	</div>
-			
-      <!-- <div class="panel-footer"><?php echo $resultado['DATA']; ?></div> -->
+			<div class="panel-footer"><?php echo $resultado['NOME_FANTASIA']; ?></div>
     </div>
+      
+    <?php } ?>
 
     <div class="container">
     <br><br>
       <p>DEIXE AQUI SEU COMENTÁRIO</p>
   <?php
-  if(isset($_GET['action']) && $_GET['action'] =='excluir'){
-   $idExcluir=$_GET['id'];
-   $query = "DELETE FROM TB_COMENTARIO WHERE COM_ID='$idExcluir'";
+  // if(isset($_GET['action']) && $_GET['action'] =='excluir'){
+  //  $idExcluir=$_GET['id'];
+  //  $query = "DELETE FROM TB_COMENTARIO WHERE COM_ID='$idExcluir'";
 
-   $stmt = $conn->prepare($query);
+  //  $stmt = $conn->prepare($query);
 
 // $stmt->bindParam(1, $id);
 
-$result = $stmt->execute();
-   // $result = mysqli_query($conn, $query);
-   if ($result) {
-     echo"<script > alert (\"Excluido com sucesso!\");</script>";
-   }
-  }
+// $result = $stmt->execute();
+//    // $result = mysqli_query($conn, $query);
+//    if ($result) {
+//      echo"<script > alert (\"Excluido com sucesso!\");</script>";
+//    }
+//   }
   ?>
   
   <!-- <div class="container"> -->
@@ -81,7 +104,7 @@ $result = $stmt->execute();
     exit;
     }
     ?>
-<form action="" method="post">
+<form action="add-comentario.php?id=<?=$id?>" method="post">
   <div class="form-row">
     <div class="form-group col-sm-7">
       <label>Nome</label>
@@ -104,27 +127,35 @@ $result = $stmt->execute();
   </div>
 </form>
 </div>
-<?php 
-if (isset($_POST['acao'])) {
-  $nomeComent = addslashes($_POST['nomeComent']);
-  $coment = addslashes($_POST['coment']);
-$acao = addslashes($_POST['acao']);
+<?php
+// $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
+//     //Valida a variavel da URL
+//     // var_dump($id);
+//     if (empty($id)){
+//       echo "ID para alteração não definido";
+//     exit;
+//     }
+    
+//     if (isset($_POST['acao'])) {
+//         $nomeComent = addslashes($_POST['nomeComent']);
+//         $coment = addslashes($_POST['coment']);
+//         $acao = addslashes($_POST['acao']);
 
-$sql = "INSERT INTO TB_COMENTARIO (COM_NOME,COM_COMENTARIO,FK_ID_NOT) VALUES(:nomeComent, :coment, :id)";
-$stmt = $conn->prepare( $sql );
+// $sql = "INSERT INTO TB_COMENTARIO (COM_NOME,COM_COMENTARIO,FK_ID_NOT) VALUES(:nomeComent, :coment, :id)";
+// $stmt = $conn->prepare( $sql );
 
-$stmt->bindParam( ':nomeComent', $nomeComent);
-$stmt->bindParam( ':coment', $coment);
-$stmt->bindParam( ':id', $id);
+// $stmt->bindParam( ':nomeComent', $nomeComent);
+// $stmt->bindParam( ':coment', $coment);
+// $stmt->bindParam( ':id', $id);
 
-$result = $stmt->execute();
-if ( ! $result ){
-  var_dump( $stmt->errorInfo() );
-  exit;
-}
-unset($_POST['acao']);
-header('location:index.php');
-} 
+// $result = $stmt->execute();
+// if ( ! $result ){
+//   var_dump( $stmt->errorInfo() );
+//   exit;
+// }
+// unset($_POST['acao']);
+// header('location:index.php');
+// } 
 
 ?>
 <div class="container">

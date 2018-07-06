@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="footer-title text-xs-center">
-            <h4 class="p-b-1">Dia-a-dia Associações</h4>
+            <h4 class="p-b-1">Comunidade Online</h4>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-xs-12">
         <hr>
-        <div class="row text-center">Copyright © Dia-a-dia Associações 2018</div>
+        <div class="row text-center">Copyright © Comunidade Online 2018</div>
       </div>
     </div>
   </div>
