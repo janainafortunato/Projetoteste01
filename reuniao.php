@@ -13,7 +13,7 @@ include "bd/conexao.php";
   $rows = $stmt->rowCount();
 
   if ($rows <=0) {
-    echo "<h1>NÃO EXISTE NOTICIAS PLUBLICADAS :(</h1>";
+    echo "<h1>NÃO EXISTEM NOTÍCIAS PLUBLICADAS :(</h1>";
     } else{         
 
   ?>

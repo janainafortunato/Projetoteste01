@@ -57,8 +57,8 @@ include 'bd/conexao.php';
     <div class="col-sm-12"> 
       <div> 
    		
-      	<h1 class="titulo"><?php echo $resultado['TITULO']; ?></h1>
-        <p class="text"><?php echo $resultado['SUBTITULO']; ?></p>
+      	<h1 class="titulo-not"><?php echo $resultado['TITULO']; ?></h1>
+        <p class="text-not"><?php echo $resultado['SUBTITULO']; ?></p>
         <small><?php echo date_format($data_publ, 'd/m/Y H:i:s'); ?> - Atualizado em: <?php echo date_format($date, 'd/m/Y H:i:s'); ?></small>
    	    <hr>
       </div>
@@ -81,8 +81,6 @@ include 'bd/conexao.php';
 
   
     $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
-
-    var_dump($id);
   
     if (empty($id)){
       echo "ID para alteração não definido";
@@ -111,7 +109,7 @@ include 'bd/conexao.php';
   <div class="form-row">
     <div class="form-group col-sm-12">
       <input type="hidden" name="acao" value="preenchido"/>
-      <button class="btn" type="submit">ENVIAR</button>
+      <button class="btn" type="submit">COMENTAR</button>
     </div>
 
 </form>
@@ -139,8 +137,8 @@ include 'bd/conexao.php';
       ?>
            <div class="form-row" id="div-comentario">
               <div class="form-group col-sm-7">
-                <p>NOME:<?php echo $name; ?></p>
-                <p>COMENTÁRIO:<?php echo $_comentario; ?></p>
+                <p>NOME: <?php echo $name; ?></p>
+                <p>COMENTÁRIO: <?php echo $_comentario; ?></p>
               </div>
             </div>
            <?php

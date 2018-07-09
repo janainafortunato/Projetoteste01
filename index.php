@@ -88,7 +88,7 @@ include "bd/conexao.php";
 <br>
   <div class="container">
   <?php
-  $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT, SUBTITULO FROM TB_NOTICIAS WHERE PUBLICADO = '1' ORDER BY DATA DESC LIMIT 9";
+  $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT, SUBTITULO FROM TB_NOTICIAS WHERE PUBLICADO = '1' ORDER BY DATA DESC LIMIT 6";
 
   $stmt = $conn->prepare($sql);
   $res = $stmt->execute();
@@ -99,8 +99,8 @@ include "bd/conexao.php";
     } else{         
 
   ?>
+  <div class="row">
   <?php 
-
   while ($campos = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $id = $campos['ID_NOT'];
     $titulo = $campos['TITULO'];
@@ -114,20 +114,24 @@ include "bd/conexao.php";
 
    ?>
 
-  <div class="row">
-    <div class="col-sm-4">
-      <div>
+  
+  <!-- <div class="not"> -->
+    <div class="col-md-4">
+      <div class="title">
         <h4 class="titulo-h4"><?php echo $titulo ?></h4>
         <p class="text-index"><?php echo $subtitulo ?></p>
       </div>
       <div>
           <a href="not.php?id=<?=$id?>"><img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;height:200px;" alt="Image"></a>
-          <p class="text-index"><?php echo $rest ?><a href="not.php?id=<?=$id?>">Saiba mais...</a></p>
+          <p class="text"><?php echo $rest ?><a href="not.php?id=<?=$id?>"> Saiba mais...</a></p>
+          <hr>
       </div>
     </div>
-  </div>
+
+  <!-- </div> -->
   <?php
     }
+  echo "</div>";
 }
   ?>
 

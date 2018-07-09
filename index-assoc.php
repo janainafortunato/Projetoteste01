@@ -52,7 +52,6 @@ include 'bd/conexao.php';
         <div class="table-responsive">
           <table id="mytable" class="table table-bordred table-striped">
             <thead>
-              <th>ID</th>
               <th>Título</th>
               <th>Categoria</th>
               <th>Data/Hora</th>
@@ -90,7 +89,6 @@ include 'bd/conexao.php';
 
               <tbody>
                 <tr>
-                  <td><?php echo $id; ?></td>
                   <td><?php echo $titulo; ?></td>
                   <td><?php echo $categoria; ?></td>
                   <td><?php echo $data; ?></td>
@@ -114,53 +112,6 @@ include 'bd/conexao.php';
       </div>
     </div>
   </div>
-
-<!-- modal excluir -->
-
-  <!-- <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title custom_align" id="Heading">Deletar Notícia</h4>
-          </div>
-          
-          <div class="modal-body">
-            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Tem certeza que deseja excluir esta notícia?</div>
-          </div>
-          
-          <div class="modal-footer ">
-            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Sim</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Não</button>
-          </div>
-        </div> 
-      </div> 
-    </div> -->
-<!-- fim excluir -->
-
-<!-- modal publicar -->
-   <!--  <div class="modal fade" id="publicar" tabindex="-1" role="dialog" aria-labelledby="publicar" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title custom_align" id="Heading">Publicar Notícia</h4>
-          </div>
-          
-          <div class="modal-body">
-            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Tem certeza que deseja publicar esta notícia?</div>
-          </div>
-          
-          <div class="modal-footer ">
-            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Sim</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Não</button>
-          </div>
-        </div> 
-      </div> 
-    </div> -->
-
-<!-- fim publicar -->
-
 
 <?php
 include 'rodape.php';

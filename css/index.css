@@ -1,69 +1,42 @@
 body{
-    /*position: relative; */
+  margin-bottom: 60px;
 }
 
-#section1 {padding-top:500px;height:500px;color: #black; background-color: #white;}
-#section2 {padding-top:200px;height:150px;color: #black; background-color: #white;}
-#section3 {padding-top:300px;height:200px;color: #black; background-color: #white;}
-#section41 {padding-top:200px;height:150px;color: #black; background-color:#white;}
-#section42 {padding-top:500px;height:500px;color: #black; background-color:#white;}
-
-
+html {
+  position: relative;
+  min-height: 100%;
+}
+/*Sobre*/
 .mainSobre{
-	text-align: center;
+  text-align: center;
+}
+
+.pSobre{
+  font-weight: bold;
+}
+
+.hSobre{
+  color: #3d6277;
+  font-weight: bold;
 }
 
 .bemVindo{
   color: blue;
 }
 
-/*estilo do footer*/
+/*Footer*/
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  
   background-color: #f5f5f5;
 }
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-/* 
-body > .container {
-  padding: 60px 15px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-} */
-
-
-
 .mainfooter{
   margin-top:80px;
   height:0;
 }
-
 footer{
   color: white;
 }
@@ -76,11 +49,9 @@ footer a{
 #facebook:hover, #twitter:hover, #instagram:hover {
   color: #dcdcdc;
 }
-
 footer a:hover{
   color: white;
 }
-
 .footer-bottom{
   background: #3d6277;
   padding: 2em;
@@ -93,6 +64,8 @@ footer a:hover{
   padding-top: 2em;
   color: white;
 }
+
+
 /**Sub Navigation**/
 .subnavigation-container{
   background: #3d6277;
@@ -106,7 +79,7 @@ footer a:hover{
 }
 .subnavigation-container .navbar{
   display: inline-block;
-  margin-bottom: -6px; /* Inline-block margin offffset HACK -Gilron */
+  margin-bottom: -6px; 
 }
 .col-subnav a{
   padding: 1rem 1rem;
@@ -122,11 +95,7 @@ footer a:hover{
   text-align: center;
 }
 
-.text{
-  font-size: 20px;
-  text-align: justify;
-}
-
+/*Notícia index*/
 .titulo{
   text-align: center;
   font-size: 30px;
@@ -137,15 +106,22 @@ footer a:hover{
   text-align: center;
   font-size: 17px;
   font-weight: bold;
-}
-.msg-despublique{
-  color: red;
+  min-height: 35px;
 }
 .text-index{
   text-align: justify;
   font-size: 15px;
+  min-height: 50px;
 }
 
+.msg-despublique{
+  color: red;
+}
+.text{
+  text-align: justify;
+  font-size: 15px;
+  min-height: 50px;
+}
 .jumbotron{
   background:#3d6277;
   height: 150px;
@@ -184,4 +160,17 @@ footer a:hover{
 }
 .not{
   max-height: 300px; 
+}
+.title {
+  min-height: 70px;
+}
+
+.titulo-not{
+  text-align: justify;
+  font-size: 35px;
+}
+
+.text-not{
+  text-align: justify;
+  font-size: 25px;
 }
