@@ -7,7 +7,7 @@ include "bd/conexao.php";
 <center><h2>AÇÕES SOCIAIS</h2></center>
 
 <?php
-  $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT, SUBTITULO FROM TB_NOTICIAS WHERE PUBLICADO = '1' AND CATEGORIA = 'Ações Sociais' ORDER BY DATA DESC LIMIT 9";
+  $sql = "SELECT ARQUIVO, TITULO, TEXTO, ID_NOT, SUBTITULO FROM TB_NOTICIAS WHERE PUBLICADO = '1' AND CATEGORIA = 'Ações Sociais' ORDER BY DATA DESC LIMIT 6";
 
   $stmt = $conn->prepare($sql);
   $res = $stmt->execute();
@@ -18,6 +18,7 @@ include "bd/conexao.php";
     } else{         
 
   ?>
+  <div class="row">
   <?php  
   while ($campos = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $id = $campos['ID_NOT'];
@@ -41,15 +42,23 @@ include "bd/conexao.php";
         <div>
             <a href="not.php?id=<?=$id?>"><img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;height:200px;" alt="Image"></a>
             <p class="text-index"><?php echo $rest ?><a href="not.php?id=<?=$id?>">Saiba mais...</a></p>
+              <hr>
         </div>
     </div>
-  </div>
-    <?php
+
+  <!-- </div> -->
+  <?php
     }
+  echo "</div>";
 }
   ?>
+
 </div>
+
+</main>
 
 <?php
 include 'rodape.php';
 ?>
+</body>
+</html>

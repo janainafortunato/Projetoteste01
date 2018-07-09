@@ -114,9 +114,7 @@ footer a:hover{
   min-height: 50px;
 }
 
-.msg-despublique{
-  color: red;
-}
+
 .text{
   text-align: justify;
   font-size: 15px;
@@ -173,4 +171,8 @@ footer a:hover{
 .text-not{
   text-align: justify;
   font-size: 25px;
+}
+
+.msg-despublique{
+  color: red;
 }
