@@ -32,9 +32,8 @@ include "bd/conexao.php";
 
    ?>
 
-  <div>
-    <div class="col-sm-4">
-    	<div>
+ <div class="col-md-4">
+      <div class="title">
             <h4 class="titulo-h4"><?php echo $titulo ?></h4>
             <p class="text-index"><?php echo $subtitulo ?></p>      
         </div>

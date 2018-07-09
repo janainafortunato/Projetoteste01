@@ -57,28 +57,28 @@ include 'cabecalho.php';
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label>Digite o Título da nóticia</label>
+            <label>Digite o Título da notícia</label>
             <input type="text" class="form-control" name="titulo" required value="<?php echo $resultado['TITULO']; ?>">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label>Digite o sub título da nóticia</label>
+            <label>Digite o subtítulo da notícia</label>
             <input type="text" class="form-control" name="subtitulo"  value="<?php echo $resultado['SUBTITULO']; ?>">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label>Digite a Nóticia</label>
+            <label>Digite a notícia</label>
             <textarea rows="10" cols="10" name="texto" class="form-control" required=""><?php echo $resultado['TEXTO']; ?></textarea>
           </div>
         </div> 
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="sel2">Categoria da nóticia</label>
+            <label for="sel2">Categoria da notícia</label>
             <p><?php echo $resultado['CATEGORIA']; ?></p>
             <label for="sel2">Editar categoria</label>
             <select multiple class="form-control" id="sel2" name="categoria" required="">

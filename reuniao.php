@@ -53,8 +53,6 @@ include "bd/conexao.php";
 
 </div>
 
-</main>
-
 <?php
 include 'rodape.php';
 ?>

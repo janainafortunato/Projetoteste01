@@ -24,7 +24,8 @@ include "bd/conexao.php";
         <div class="item active">
           <img src="img/figura03.jpeg" alt="Los Angeles" style="width:100%;height:400px;">
           <div class="carousel-caption">
-            <h4 style="font-size: 25px">Associação Beneficente Betânia-A.B.B</h4>
+            <a href="form-cadastro-assoc.php" id="btn" class="btn">CADRASTRE-SE</a>
+            <!-- <h4 style="font-size: 25px">Associação Beneficente Betânia-A.B.B</h4> -->
         
       </div>
 
