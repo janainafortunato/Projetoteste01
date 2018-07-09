@@ -114,7 +114,7 @@ include "bd/conexao.php";
 
    ?>
 
-  <div class="not">
+  <div class="row">
     <div class="col-sm-4">
       <div>
         <h4 class="titulo-h4"><?php echo $titulo ?></h4>
@@ -124,7 +124,6 @@ include "bd/conexao.php";
           <a href="not.php?id=<?=$id?>"><img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;height:200px;" alt="Image"></a>
           <p class="text-index"><?php echo $rest ?><a href="not.php?id=<?=$id?>">Saiba mais...</a></p>
       </div>
-        <!-- <div class="panel-footer">16/05/18 em Abreu lima</div> -->
     </div>
   </div>
   <?php

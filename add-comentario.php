@@ -10,7 +10,7 @@ $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
     // var_dump($id);
     if (empty($id)){
       echo "ID para alteração não definido";
-    exit;
+      exit;
     }
     
     if (isset($_POST['acao'])) {
@@ -31,34 +31,8 @@ if ( ! $result ){
   exit;
 }
 unset($_POST['acao']);
-header('location:not.php?id=<?=$id?>');
+header('location:not.php?id=' . $id);
 } 
 
 ?>
 
-// $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
-//     //Valida a variavel da URL
-//     if (empty($id)){
-//       echo "ID para alteração não definido";
-//     exit;
-//     }
-
-// $nomeComent = addslashes($_POST['nomeComent']);
-// $coment = addslashes($_POST['coment']);
-// // $acao = addslashes($_POST['acao']);
-
-// $sql = "INSERT INTO TB_COMENTARIO (COM_NOME,COM_COMENTARIO,FK_ID_NOT) VALUES(:nomeComent, :coment, :id)";
-// $stmt = $conn->prepare( $sql );
-
-// $stmt->bindParam( ':nomeComent', $nomeComent);
-// $stmt->bindParam( ':coment', $coment);
-// $stmt->bindParam( ':id', $id);
-
-// $result = $stmt->execute();
-// if ( ! $result ){
-// 	var_dump( $stmt->errorInfo() );
-// 	exit;
-// }
-// header('location:not.php?id=<?=$id?>');
-
-?>

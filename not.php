@@ -14,7 +14,7 @@ include 'bd/conexao.php';
     exit;
     }
     $sql = "SELECT * FROM TB_NOTICIAS, TB_ASSOCIACOES WHERE ID_NOT='$id' AND ID_ASSOC = NOT_ASSOC_FK";
-    // $sql = "SELECT CATEGORIA, TITULO, SUBTITULO, ARQUIVO, TEXTO, DATA, DATA_ED FROM TB_NOTICIAS WHERE ID_NOT='$id'";
+  
     $result = $conn->prepare($sql);
     $result->bindParam(':id', $id, PDO::PARAM_INT);
     $result->execute();
@@ -70,40 +70,29 @@ include 'bd/conexao.php';
     	</div>
 			<div class="panel-footer"><?php echo $resultado['NOME_FANTASIA']; ?></div>
     </div>
+  </div>
       
     <?php } ?>
 
-    <div class="container">
-    <br><br>
-      <p>DEIXE AQUI SEU COMENTÁRIO</p>
-  <?php
-  // if(isset($_GET['action']) && $_GET['action'] =='excluir'){
-  //  $idExcluir=$_GET['id'];
-  //  $query = "DELETE FROM TB_COMENTARIO WHERE COM_ID='$idExcluir'";
 
-  //  $stmt = $conn->prepare($query);
+    <!-- formulário comentário -->
 
-// $stmt->bindParam(1, $id);
+  <?php 
 
-// $result = $stmt->execute();
-//    // $result = mysqli_query($conn, $query);
-//    if ($result) {
-//      echo"<script > alert (\"Excluido com sucesso!\");</script>";
-//    }
-//   }
-  ?>
   
-  <!-- <div class="container"> -->
-  <?php
+    $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
-  $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
-    //Valida a variavel da URL
-    // var_dump($id);
+    var_dump($id);
+  
     if (empty($id)){
       echo "ID para alteração não definido";
     exit;
     }
-    ?>
+
+  ?>
+    <div class="container">
+  
+      <div><p>DEIXE AQUI SEU COMENTÁRIO</p></div>
 <form action="add-comentario.php?id=<?=$id?>" method="post">
   <div class="form-row">
     <div class="form-group col-sm-7">
@@ -124,40 +113,10 @@ include 'bd/conexao.php';
       <input type="hidden" name="acao" value="preenchido"/>
       <button class="btn" type="submit">ENVIAR</button>
     </div>
-  </div>
+
 </form>
 </div>
-<?php
-// $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
-//     //Valida a variavel da URL
-//     // var_dump($id);
-//     if (empty($id)){
-//       echo "ID para alteração não definido";
-//     exit;
-//     }
-    
-//     if (isset($_POST['acao'])) {
-//         $nomeComent = addslashes($_POST['nomeComent']);
-//         $coment = addslashes($_POST['coment']);
-//         $acao = addslashes($_POST['acao']);
-
-// $sql = "INSERT INTO TB_COMENTARIO (COM_NOME,COM_COMENTARIO,FK_ID_NOT) VALUES(:nomeComent, :coment, :id)";
-// $stmt = $conn->prepare( $sql );
-
-// $stmt->bindParam( ':nomeComent', $nomeComent);
-// $stmt->bindParam( ':coment', $coment);
-// $stmt->bindParam( ':id', $id);
-
-// $result = $stmt->execute();
-// if ( ! $result ){
-//   var_dump( $stmt->errorInfo() );
-//   exit;
-// }
-// unset($_POST['acao']);
-// header('location:index.php');
-// } 
-
-?>
+</div>
 <div class="container">
 <p>COMENTÁRIOS</p>
   <?php
@@ -171,7 +130,7 @@ include 'bd/conexao.php';
 
     } else {
       ?>
-    <!-- <div class="container"> -->
+
       <?php
       while($campos = $stmt->fetch(PDO::FETCH_ASSOC)){
            $id=$campos['COM_ID'];
@@ -188,63 +147,14 @@ include 'bd/conexao.php';
         }
        }
        ?>
-    </div>
+
+  </div>
+</main>
 </body>
 
 
 
 </html>
-<?php
-// if(isset($_POST['acao']) && $_POST['acao']=='preenchido'){
-//   include_once 'bd/conexao.php';
-
-//   $nomeComent = addslashes($_POST['nomeComent']);
-//   $coment = addslashes($_POST['coment']);
-
-//   $sql = "INSERT INTO TB_COMENTARIO (COM_NOME, COM_COMENTARIO) VALUES(:nomeComent, :coment)";
-
-//   $stmt = $conn->prepare( $sql );
-
-//   $stmt->bindParam( ':nomeComent', $nomeComent );
-//   $stmt->bindParam( ':coment', $coment );
-
-//   $result = $stmt->execute();
-//     if ( ! $result ){
-//       var_dump( $stmt->errorInfo() );
-//       exit;
-//     }
-//   unset($_POST['acao']);
-//  // header('location:index.php');
-// }
-// header('location:index.php');
- ?>
-    <?php 
-    // include "comentario.php";
-    ?>
-  </div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-      <div id="fb-root"></div>
-
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <div class="fb-comments" data-href="" data-numposts="5"></div>
-  </div>
-</div>
-
-
-
-    <?php 
-    // include "sistema-coment-face.php";
-    ?>
-
-  </div>
-</main>
 
 <?php include "rodape.php";
 ?> 
