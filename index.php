@@ -118,13 +118,13 @@ include "bd/conexao.php";
   
   <!-- <div class="not"> -->
     <div class="col-md-4">
-      <div class="title">
+      <div>
         <h4 class="titulo-h4"><?php echo $titulo ?></h4>
         <p class="text-index"><?php echo $subtitulo ?></p>
       </div>
       <div>
           <a href="not.php?id=<?=$id?>"><img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;height:200px;" alt="Image"></a>
-          <p class="text"><?php echo $rest ?><a href="not.php?id=<?=$id?>"> Saiba mais...</a></p>
+          <p class="text-index"><?php echo $rest ?><a href="not.php?id=<?=$id?>"> Saiba mais...</a></p>
           <hr>
       </div>
     </div>

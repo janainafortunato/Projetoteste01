@@ -24,9 +24,13 @@ include 'bd/conexao.php';
     echo "Nunhum dado encontrado";
     exit;
     }
+
+    $text = nl2br($resultado['TEXTO']);
+    $result = str_replace( array("\r\n", "\r", "\n"), '<br />', $text ); 
+
     $date = $resultado['DATA_ED'];
     $data_publ= date_create($resultado['DATA']);
-    // YYYY-MM-DD   
+    
     $arquivo = $resultado['ARQUIVO'];
     $entry = base64_encode($arquivo);
     ?>
@@ -42,9 +46,9 @@ include 'bd/conexao.php';
       </div>
       
       <div>
-        <img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;" alt="Image">
+        <img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" alt="Image">
         <hr>
-        <p class="text"><?php echo $resultado['TEXTO']; ?></p>
+        <p class="text"><?php echo $result; ?></p>
       </div>
       
       <div class="panel-footer"><?php echo $resultado['NOME_FANTASIA']; ?></div>
@@ -66,7 +70,7 @@ include 'bd/conexao.php';
     	<div>
     		<img src="data:image/jpeg;base64,<?= $entry ?>" class="img-responsive" style="width:100%;" alt="Image">
         <hr>
-				<p class="text"><?php echo $resultado['TEXTO']; ?></p>
+				<p class="text"><?php echo $result; ?></p>
     	</div>
 			<div class="panel-footer"><?php echo $resultado['NOME_FANTASIA']; ?></div>
     </div>
